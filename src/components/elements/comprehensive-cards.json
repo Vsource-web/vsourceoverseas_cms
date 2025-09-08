@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_elements_comprehensive_cards",
+  "info": {
+    "displayName": "Comprehensive_cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "external_url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

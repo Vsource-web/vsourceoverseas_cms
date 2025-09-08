@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_about_counts",
+  "info": {
+    "displayName": "About_count"
+  },
+  "options": {},
+  "attributes": {
+    "image_or_gif": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "About_text": {
+      "type": "string"
+    },
+    "count": {
+      "type": "biginteger"
+    }
+  },
+  "config": {}
+}

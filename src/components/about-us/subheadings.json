@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_about_us_subheadings",
+  "info": {
+    "displayName": "subheadings"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

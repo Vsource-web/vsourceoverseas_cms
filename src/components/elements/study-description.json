@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_study_descriptions",
+  "info": {
+    "displayName": "study_description"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

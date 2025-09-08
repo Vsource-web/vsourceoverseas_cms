@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_comprehensive_s",
+  "info": {
+    "displayName": "Comprehensive "
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "elements.comprehensive-cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

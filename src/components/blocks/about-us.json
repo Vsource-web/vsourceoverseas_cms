@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_about_uses",
+  "info": {
+    "displayName": "About_us"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "SubTitle_1": {
+      "type": "string"
+    },
+    "SubTitlt_2": {
+      "type": "string"
+    },
+    "SubTitle_3": {
+      "type": "string"
+    },
+    "about_list": {
+      "type": "component",
+      "component": "blocks.about-list",
+      "repeatable": true
+    },
+    "About_us_count": {
+      "type": "component",
+      "component": "blocks.about-count",
+      "repeatable": true
+    },
+    "chairmanImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

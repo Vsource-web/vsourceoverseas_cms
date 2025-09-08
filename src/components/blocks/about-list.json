@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_about_lists",
+  "info": {
+    "displayName": "About_list"
+  },
+  "options": {},
+  "attributes": {
+    "Image_or_gif": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "about_text": {
+      "type": "string"
+    },
+    "bold_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

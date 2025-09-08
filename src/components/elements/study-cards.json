@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_elements_study_cards",
+  "info": {
+    "displayName": "study_cards"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "tag": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "descriptions": {
+      "type": "component",
+      "component": "elements.study-description",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

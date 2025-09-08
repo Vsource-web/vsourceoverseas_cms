@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_success_stories",
+  "info": {
+    "displayName": "success_stories"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "elements.testimonial",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

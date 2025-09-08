@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_about_us_about_cards",
+  "info": {
+    "displayName": "about_card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "count": {
+      "type": "biginteger"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

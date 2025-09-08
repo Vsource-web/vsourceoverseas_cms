@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_us_management_teams",
+  "info": {
+    "displayName": "Management_team"
+  },
+  "options": {},
+  "attributes": {
+    "members": {
+      "type": "component",
+      "component": "about-us.member",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

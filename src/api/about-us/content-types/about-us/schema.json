@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "about us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "about": {
+      "type": "dynamiczone",
+      "components": [
+        "about-us.hero",
+        "about-us.about",
+        "about-us.management-team"
+      ]
+    }
+  }
+}

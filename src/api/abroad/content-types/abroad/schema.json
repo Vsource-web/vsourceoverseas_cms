@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abroads",
+  "info": {
+    "singularName": "abroad",
+    "pluralName": "abroads",
+    "displayName": "universities"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

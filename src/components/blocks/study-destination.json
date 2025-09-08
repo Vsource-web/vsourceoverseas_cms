@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_study_destinations",
+  "info": {
+    "displayName": "study destination"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "study_cards": {
+      "type": "component",
+      "component": "elements.study-cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "Landing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Study_in": {
+      "type": "string",
+      "required": true
+    },
+    "Badge": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Background_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "girl_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Mobile_background_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "country_names": {
+      "type": "json",
+      "required": true
+    },
+    "Students_Guided": {
+      "type": "string",
+      "required": true
+    },
+    "University_Partners": {
+      "type": "string",
+      "required": true
+    },
+    "ratings": {
+      "type": "string",
+      "required": true
+    },
+    "Sections": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.about-us",
+        "blocks.study-destination",
+        "blocks.services",
+        "blocks.comprehensive",
+        "blocks.company",
+        "blocks.success-stories"
+      ]
+    }
+  }
+}
