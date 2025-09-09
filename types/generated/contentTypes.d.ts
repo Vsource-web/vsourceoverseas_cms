@@ -499,6 +499,34 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiUniDirectoryUniDirectory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'uni_directories';
+  info: {
+    displayName: 'uni-directory';
+    pluralName: 'uni-directories';
+    singularName: 'uni-directory';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::uni-directory.uni-directory'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1011,6 +1039,7 @@ declare module '@strapi/strapi' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::abroad.abroad': ApiAbroadAbroad;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::uni-directory.uni-directory': ApiUniDirectoryUniDirectory;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

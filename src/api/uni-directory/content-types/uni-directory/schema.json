@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "uni_directories",
+  "info": {
+    "singularName": "uni-directory",
+    "pluralName": "uni-directories",
+    "displayName": "uni-directory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

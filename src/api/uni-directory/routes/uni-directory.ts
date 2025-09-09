@@ -1,0 +1,7 @@
+/**
+ * uni-directory router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::uni-directory.uni-directory');
