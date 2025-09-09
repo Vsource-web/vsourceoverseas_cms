@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_universities_living_cost_tuition_fees",
+  "info": {
+    "displayName": "Living_Cost_Tuition_Fee"
+  },
+  "options": {},
+  "attributes": {
+    "cities": {
+      "type": "component",
+      "component": "universities.cities",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

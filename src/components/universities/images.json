@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_universities_images",
+  "info": {
+    "displayName": "images"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

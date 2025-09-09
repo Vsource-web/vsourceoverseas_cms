@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_universities_overviews",
+  "info": {
+    "displayName": "overview"
+  },
+  "options": {},
+  "attributes": {
+    "highlights": {
+      "type": "component",
+      "component": "universities.highlight",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_universities_why_study_ins",
+  "info": {
+    "displayName": "whyStudyIn"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "highlights_points": {
+      "type": "component",
+      "component": "elements.study-description",
+      "repeatable": true
+    },
+    "whyStudyin_cards": {
+      "type": "component",
+      "component": "universities.why-studyin-cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

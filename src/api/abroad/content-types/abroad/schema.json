@@ -10,5 +10,47 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "component",
+      "component": "universities.overview",
+      "repeatable": false
+    },
+    "whyStudyin": {
+      "type": "component",
+      "component": "universities.why-study-in",
+      "repeatable": false
+    },
+    "Living_Cost_Tuition_Fee": {
+      "type": "component",
+      "component": "universities.living-cost-tuition-fee",
+      "repeatable": false
+    },
+    "admissions": {
+      "type": "component",
+      "component": "universities.admissions",
+      "repeatable": false
+    },
+    "visa_requirements": {
+      "type": "component",
+      "component": "universities.visa-requirements",
+      "repeatable": false
+    },
+    "students_expriences": {
+      "type": "component",
+      "component": "universities.student-exprience",
+      "repeatable": false
+    }
+  }
 }

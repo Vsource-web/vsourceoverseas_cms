@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_universities_student_expriences",
+  "info": {
+    "displayName": "student_exprience"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "component",
+      "component": "universities.images",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

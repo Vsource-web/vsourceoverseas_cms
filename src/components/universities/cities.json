@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_universities_cities",
+  "info": {
+    "displayName": "cities"
+  },
+  "options": {},
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "tables": {
+      "type": "component",
+      "component": "universities.table-data",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

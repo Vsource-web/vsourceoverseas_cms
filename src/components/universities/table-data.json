@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_universities_table_data",
+  "info": {
+    "displayName": "table_data"
+  },
+  "options": {},
+  "attributes": {
+    "label_values": {
+      "type": "component",
+      "component": "universities.label-values",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

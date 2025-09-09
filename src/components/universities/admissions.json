@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_universities_admissions",
+  "info": {
+    "displayName": "admissions"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subheading1": {
+      "type": "string"
+    },
+    "subheading2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "checklist": {
+      "type": "component",
+      "component": "universities.checklist",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

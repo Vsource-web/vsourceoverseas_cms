@@ -249,6 +249,172 @@ export interface ElementsTestimonial extends Struct.ComponentSchema {
   };
 }
 
+export interface UniversitiesAdmissions extends Struct.ComponentSchema {
+  collectionName: 'components_universities_admissions';
+  info: {
+    displayName: 'admissions';
+  };
+  attributes: {
+    checklist: Schema.Attribute.Component<'universities.checklist', false>;
+    description: Schema.Attribute.Text;
+    subheading1: Schema.Attribute.String;
+    subheading2: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UniversitiesChecklist extends Struct.ComponentSchema {
+  collectionName: 'components_universities_checklists';
+  info: {
+    displayName: 'checklist';
+  };
+  attributes: {
+    note: Schema.Attribute.Text;
+    texts: Schema.Attribute.Component<'universities.text', true>;
+  };
+}
+
+export interface UniversitiesCities extends Struct.ComponentSchema {
+  collectionName: 'components_universities_cities';
+  info: {
+    displayName: 'cities';
+  };
+  attributes: {
+    city: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    tables: Schema.Attribute.Component<'universities.table-data', true>;
+  };
+}
+
+export interface UniversitiesHighlight extends Struct.ComponentSchema {
+  collectionName: 'components_universities_highlights';
+  info: {
+    displayName: 'highlight';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface UniversitiesImages extends Struct.ComponentSchema {
+  collectionName: 'components_universities_images';
+  info: {
+    displayName: 'images';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface UniversitiesLabelValues extends Struct.ComponentSchema {
+  collectionName: 'components_universities_label_values';
+  info: {
+    displayName: 'label_values';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface UniversitiesLivingCostTuitionFee
+  extends Struct.ComponentSchema {
+  collectionName: 'components_universities_living_cost_tuition_fees';
+  info: {
+    displayName: 'Living_Cost_Tuition_Fee';
+  };
+  attributes: {
+    cities: Schema.Attribute.Component<'universities.cities', true>;
+  };
+}
+
+export interface UniversitiesOverview extends Struct.ComponentSchema {
+  collectionName: 'components_universities_overviews';
+  info: {
+    displayName: 'overview';
+  };
+  attributes: {
+    highlights: Schema.Attribute.Component<'universities.highlight', true>;
+  };
+}
+
+export interface UniversitiesStudentExprience extends Struct.ComponentSchema {
+  collectionName: 'components_universities_student_expriences';
+  info: {
+    displayName: 'student_exprience';
+  };
+  attributes: {
+    image: Schema.Attribute.Component<'universities.images', true>;
+    subheading: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UniversitiesTableData extends Struct.ComponentSchema {
+  collectionName: 'components_universities_table_data';
+  info: {
+    displayName: 'table_data';
+  };
+  attributes: {
+    label_values: Schema.Attribute.Component<'universities.label-values', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UniversitiesText extends Struct.ComponentSchema {
+  collectionName: 'components_universities_texts';
+  info: {
+    displayName: 'text';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface UniversitiesVisaRequirements extends Struct.ComponentSchema {
+  collectionName: 'components_universities_visa_requirements';
+  info: {
+    displayName: 'visa_requirements';
+  };
+  attributes: {
+    details: Schema.Attribute.Component<'universities.text', true>;
+    subheading: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UniversitiesWhyStudyIn extends Struct.ComponentSchema {
+  collectionName: 'components_universities_why_study_ins';
+  info: {
+    displayName: 'whyStudyIn';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    highlights_points: Schema.Attribute.Component<
+      'elements.study-description',
+      true
+    >;
+    title: Schema.Attribute.String;
+    whyStudyin_cards: Schema.Attribute.Component<
+      'universities.why-studyin-cards',
+      true
+    >;
+  };
+}
+
+export interface UniversitiesWhyStudyinCards extends Struct.ComponentSchema {
+  collectionName: 'components_universities_why_studyin_cards';
+  info: {
+    displayName: 'whyStudyin_cards';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -272,6 +438,20 @@ declare module '@strapi/strapi' {
       'elements.study-cards': ElementsStudyCards;
       'elements.study-description': ElementsStudyDescription;
       'elements.testimonial': ElementsTestimonial;
+      'universities.admissions': UniversitiesAdmissions;
+      'universities.checklist': UniversitiesChecklist;
+      'universities.cities': UniversitiesCities;
+      'universities.highlight': UniversitiesHighlight;
+      'universities.images': UniversitiesImages;
+      'universities.label-values': UniversitiesLabelValues;
+      'universities.living-cost-tuition-fee': UniversitiesLivingCostTuitionFee;
+      'universities.overview': UniversitiesOverview;
+      'universities.student-exprience': UniversitiesStudentExprience;
+      'universities.table-data': UniversitiesTableData;
+      'universities.text': UniversitiesText;
+      'universities.visa-requirements': UniversitiesVisaRequirements;
+      'universities.why-study-in': UniversitiesWhyStudyIn;
+      'universities.why-studyin-cards': UniversitiesWhyStudyinCards;
     }
   }
 }

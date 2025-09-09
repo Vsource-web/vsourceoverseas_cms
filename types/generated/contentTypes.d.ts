@@ -414,19 +414,36 @@ export interface ApiAbroadAbroad extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    admissions: Schema.Attribute.Component<'universities.admissions', false>;
+    banner: Schema.Attribute.Media<'images' | 'files'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Living_Cost_Tuition_Fee: Schema.Attribute.Component<
+      'universities.living-cost-tuition-fee',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::abroad.abroad'
     > &
       Schema.Attribute.Private;
+    overview: Schema.Attribute.Component<'universities.overview', false>;
     publishedAt: Schema.Attribute.DateTime;
+    students_expriences: Schema.Attribute.Component<
+      'universities.student-exprience',
+      false
+    >;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    visa_requirements: Schema.Attribute.Component<
+      'universities.visa-requirements',
+      false
+    >;
+    whyStudyin: Schema.Attribute.Component<'universities.why-study-in', false>;
   };
 }
 
@@ -448,7 +465,9 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    gateway: Schema.Attribute.String;
     girl_image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    intakes: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -457,6 +476,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Mobile_background_image: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required;
+    mobile_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     ratings: Schema.Attribute.String & Schema.Attribute.Required;
     Sections: Schema.Attribute.DynamicZone<

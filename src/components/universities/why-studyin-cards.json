@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_universities_why_studyin_cards",
+  "info": {
+    "displayName": "whyStudyin_cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

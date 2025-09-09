@@ -63,6 +63,15 @@
       "type": "string",
       "required": true
     },
+    "mobile_title": {
+      "type": "string"
+    },
+    "intakes": {
+      "type": "string"
+    },
+    "gateway": {
+      "type": "string"
+    },
     "ratings": {
       "type": "string",
       "required": true

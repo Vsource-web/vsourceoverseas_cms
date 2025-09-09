@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_universities_checklists",
+  "info": {
+    "displayName": "checklist"
+  },
+  "options": {},
+  "attributes": {
+    "texts": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "note": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
