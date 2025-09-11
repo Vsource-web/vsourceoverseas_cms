@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_explore_uni_jobs",
+  "info": {
+    "displayName": "jobs"
+  },
+  "options": {},
+  "attributes": {
+    "job_profiles": {
+      "type": "string"
+    },
+    "average_salary": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

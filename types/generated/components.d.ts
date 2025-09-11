@@ -249,6 +249,256 @@ export interface ElementsTestimonial extends Struct.ComponentSchema {
   };
 }
 
+export interface ExploreUniAccordian extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_accordians';
+  info: {
+    displayName: 'accordian';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface ExploreUniAdmissionReq extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_admission_reqs';
+  info: {
+    displayName: 'admission_req';
+  };
+  attributes: {
+    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ExploreUniAdmissions extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_admissions';
+  info: {
+    displayName: 'admissions';
+  };
+  attributes: {
+    admissions_req: Schema.Attribute.Component<
+      'explore-uni.admission-req',
+      true
+    >;
+    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+  };
+}
+
+export interface ExploreUniAdmissionsReq extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_admissions_reqs';
+  info: {
+    displayName: 'admissions_req';
+  };
+  attributes: {};
+}
+
+export interface ExploreUniCostOfStudy extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_cost_of_studies';
+  info: {
+    displayName: 'cost_of_study';
+  };
+  attributes: {
+    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    expenses_table: Schema.Attribute.Component<
+      'explore-uni.expenses-table',
+      true
+    >;
+  };
+}
+
+export interface ExploreUniCourses extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_courses';
+  info: {
+    displayName: 'courses';
+  };
+  attributes: {
+    details: Schema.Attribute.Component<'universities.uni-overview', true>;
+    famous_courses: Schema.Attribute.Component<
+      'explore-uni.courses-details',
+      true
+    >;
+  };
+}
+
+export interface ExploreUniCoursesDetails extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_courses_details';
+  info: {
+    displayName: 'courses_details';
+  };
+  attributes: {
+    annual_fee: Schema.Attribute.String;
+    duration: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface ExploreUniExpensesTable extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_expenses_tables';
+  info: {
+    displayName: 'expenses_table';
+  };
+  attributes: {
+    annual_expenses: Schema.Attribute.String;
+    types_of_expenses: Schema.Attribute.String;
+  };
+}
+
+export interface ExploreUniFamousCourses extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_famous_courses';
+  info: {
+    displayName: 'famous_courses';
+  };
+  attributes: {
+    annual_fee: Schema.Attribute.String;
+    cource_name: Schema.Attribute.String;
+    duration: Schema.Attribute.String;
+  };
+}
+
+export interface ExploreUniFaq extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {
+    accordion: Schema.Attribute.Component<'explore-uni.accordian', true>;
+  };
+}
+
+export interface ExploreUniGallery extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_galleries';
+  info: {
+    displayName: 'gallery';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files', true>;
+  };
+}
+
+export interface ExploreUniImageGallery extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_image_galleries';
+  info: {
+    displayName: 'image_gallery';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface ExploreUniIntakeDes extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_intake_des';
+  info: {
+    displayName: 'intake_des';
+  };
+  attributes: {
+    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+  };
+}
+
+export interface ExploreUniIntakeDescription extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_intake_descriptions';
+  info: {
+    displayName: 'intake_description';
+  };
+  attributes: {
+    title: Schema.Attribute.Component<'universities.uni-overview', true>;
+  };
+}
+
+export interface ExploreUniIntakeQueries extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_intake_queries';
+  info: {
+    displayName: 'intake_queries';
+  };
+  attributes: {};
+}
+
+export interface ExploreUniIntakes extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_intakes';
+  info: {
+    displayName: 'intakes';
+  };
+  attributes: {
+    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    famous_intakes: Schema.Attribute.Component<
+      'universities.why-studyin-cards',
+      true
+    >;
+  };
+}
+
+export interface ExploreUniJobs extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_jobs';
+  info: {
+    displayName: 'jobs';
+  };
+  attributes: {
+    average_salary: Schema.Attribute.String;
+    job_profiles: Schema.Attribute.String;
+  };
+}
+
+export interface ExploreUniPlacements extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_placements';
+  info: {
+    displayName: 'placements';
+  };
+  attributes: {
+    carousel: Schema.Attribute.Component<'explore-uni.image-gallery', true>;
+    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    jobs: Schema.Attribute.Component<'explore-uni.jobs', true>;
+  };
+}
+
+export interface ExploreUniQueries extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_queries';
+  info: {
+    displayName: 'queries';
+  };
+  attributes: {
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface ExploreUniRanking extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_rankings';
+  info: {
+    displayName: 'ranking';
+  };
+  attributes: {
+    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    items: Schema.Attribute.Component<'universities.why-studyin-cards', true>;
+  };
+}
+
+export interface ExploreUniScholarshipDetails extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_scholarship_details';
+  info: {
+    displayName: 'scholarship_details';
+  };
+  attributes: {
+    amount: Schema.Attribute.String;
+    level: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface ExploreUniScholarships extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_scholarships_s';
+  info: {
+    displayName: 'Scholarships ';
+  };
+  attributes: {
+    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    scholarship_details: Schema.Attribute.Component<
+      'explore-uni.scholarship-details',
+      true
+    >;
+  };
+}
+
 export interface UniversitiesAdmissions extends Struct.ComponentSchema {
   collectionName: 'components_universities_admissions';
   info: {
@@ -340,6 +590,19 @@ export interface UniversitiesOverview extends Struct.ComponentSchema {
   };
 }
 
+export interface UniversitiesStats extends Struct.ComponentSchema {
+  collectionName: 'components_universities_stats';
+  info: {
+    displayName: 'stats';
+  };
+  attributes: {
+    acceptanceRate: Schema.Attribute.String;
+    placement: Schema.Attribute.String;
+    ratio: Schema.Attribute.String;
+    Total_International_Students: Schema.Attribute.String;
+  };
+}
+
 export interface UniversitiesStudentExprience extends Struct.ComponentSchema {
   collectionName: 'components_universities_student_expriences';
   info: {
@@ -370,6 +633,16 @@ export interface UniversitiesText extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.String;
+  };
+}
+
+export interface UniversitiesUniOverview extends Struct.ComponentSchema {
+  collectionName: 'components_universities_uni_overviews';
+  info: {
+    displayName: 'uni_overview';
+  };
+  attributes: {
+    descriptions: Schema.Attribute.RichText;
   };
 }
 
@@ -438,6 +711,28 @@ declare module '@strapi/strapi' {
       'elements.study-cards': ElementsStudyCards;
       'elements.study-description': ElementsStudyDescription;
       'elements.testimonial': ElementsTestimonial;
+      'explore-uni.accordian': ExploreUniAccordian;
+      'explore-uni.admission-req': ExploreUniAdmissionReq;
+      'explore-uni.admissions': ExploreUniAdmissions;
+      'explore-uni.admissions-req': ExploreUniAdmissionsReq;
+      'explore-uni.cost-of-study': ExploreUniCostOfStudy;
+      'explore-uni.courses': ExploreUniCourses;
+      'explore-uni.courses-details': ExploreUniCoursesDetails;
+      'explore-uni.expenses-table': ExploreUniExpensesTable;
+      'explore-uni.famous-courses': ExploreUniFamousCourses;
+      'explore-uni.faq': ExploreUniFaq;
+      'explore-uni.gallery': ExploreUniGallery;
+      'explore-uni.image-gallery': ExploreUniImageGallery;
+      'explore-uni.intake-des': ExploreUniIntakeDes;
+      'explore-uni.intake-description': ExploreUniIntakeDescription;
+      'explore-uni.intake-queries': ExploreUniIntakeQueries;
+      'explore-uni.intakes': ExploreUniIntakes;
+      'explore-uni.jobs': ExploreUniJobs;
+      'explore-uni.placements': ExploreUniPlacements;
+      'explore-uni.queries': ExploreUniQueries;
+      'explore-uni.ranking': ExploreUniRanking;
+      'explore-uni.scholarship-details': ExploreUniScholarshipDetails;
+      'explore-uni.scholarships': ExploreUniScholarships;
       'universities.admissions': UniversitiesAdmissions;
       'universities.checklist': UniversitiesChecklist;
       'universities.cities': UniversitiesCities;
@@ -446,9 +741,11 @@ declare module '@strapi/strapi' {
       'universities.label-values': UniversitiesLabelValues;
       'universities.living-cost-tuition-fee': UniversitiesLivingCostTuitionFee;
       'universities.overview': UniversitiesOverview;
+      'universities.stats': UniversitiesStats;
       'universities.student-exprience': UniversitiesStudentExprience;
       'universities.table-data': UniversitiesTableData;
       'universities.text': UniversitiesText;
+      'universities.uni-overview': UniversitiesUniOverview;
       'universities.visa-requirements': UniversitiesVisaRequirements;
       'universities.why-study-in': UniversitiesWhyStudyIn;
       'universities.why-studyin-cards': UniversitiesWhyStudyinCards;

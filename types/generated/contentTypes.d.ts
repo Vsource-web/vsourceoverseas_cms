@@ -406,7 +406,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
 export interface ApiAbroadAbroad extends Struct.CollectionTypeSchema {
   collectionName: 'abroads';
   info: {
-    displayName: 'universities';
+    displayName: 'Study_in';
     pluralName: 'abroads';
     singularName: 'abroad';
   };
@@ -503,7 +503,7 @@ export interface ApiUniDirectoryUniDirectory
   extends Struct.CollectionTypeSchema {
   collectionName: 'uni_directories';
   info: {
-    displayName: 'uni-directory';
+    displayName: 'Explore_Universities';
     pluralName: 'uni-directories';
     singularName: 'uni-directory';
   };
@@ -511,19 +511,43 @@ export interface ApiUniDirectoryUniDirectory
     draftAndPublish: true;
   };
   attributes: {
+    admissions: Schema.Attribute.Component<'explore-uni.admissions', false>;
+    banner: Schema.Attribute.Media<'images' | 'files'>;
+    campus: Schema.Attribute.String;
+    cost_of_study: Schema.Attribute.Component<
+      'explore-uni.cost-of-study',
+      false
+    >;
+    country: Schema.Attribute.String;
+    courses: Schema.Attribute.Component<'explore-uni.courses', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faqs: Schema.Attribute.Component<'explore-uni.faq', false>;
+    gallerys: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    intakes: Schema.Attribute.Component<'explore-uni.intakes', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::uni-directory.uni-directory'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files'>;
+    name: Schema.Attribute.String;
+    overview: Schema.Attribute.Component<'universities.uni-overview', false>;
+    placements: Schema.Attribute.Component<'explore-uni.placements', false>;
     publishedAt: Schema.Attribute.DateTime;
+    rankings: Schema.Attribute.Component<'explore-uni.ranking', false>;
+    scholarship: Schema.Attribute.Component<'explore-uni.scholarships', false>;
+    slug: Schema.Attribute.UID<'name'>;
+    stats: Schema.Attribute.Component<'universities.stats', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    website: Schema.Attribute.String;
   };
 }
 

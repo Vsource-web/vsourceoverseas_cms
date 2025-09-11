@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_universities_uni_overviews",
+  "info": {
+    "displayName": "uni_overview"
+  },
+  "options": {},
+  "attributes": {
+    "descriptions": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

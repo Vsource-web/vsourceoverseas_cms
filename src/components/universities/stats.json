@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_universities_stats",
+  "info": {
+    "displayName": "stats"
+  },
+  "options": {},
+  "attributes": {
+    "acceptanceRate": {
+      "type": "string"
+    },
+    "Total_International_Students": {
+      "type": "string"
+    },
+    "ratio": {
+      "type": "string"
+    },
+    "placement": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

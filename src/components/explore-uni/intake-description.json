@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_explore_uni_intake_descriptions",
+  "info": {
+    "displayName": "intake_description"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "component": "universities.uni-overview",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

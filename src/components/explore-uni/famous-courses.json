@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_explore_uni_famous_courses",
+  "info": {
+    "displayName": "famous_courses"
+  },
+  "options": {},
+  "attributes": {
+    "cource_name": {
+      "type": "string"
+    },
+    "annual_fee": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

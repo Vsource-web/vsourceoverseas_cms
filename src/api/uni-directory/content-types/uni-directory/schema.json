@@ -4,11 +4,104 @@
   "info": {
     "singularName": "uni-directory",
     "pluralName": "uni-directories",
-    "displayName": "uni-directory"
+    "displayName": "Explore_Universities"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "country": {
+      "type": "string"
+    },
+    "campus": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "component",
+      "component": "universities.uni-overview",
+      "repeatable": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "universities.stats",
+      "repeatable": false
+    },
+    "rankings": {
+      "type": "component",
+      "component": "explore-uni.ranking",
+      "repeatable": false
+    },
+    "intakes": {
+      "type": "component",
+      "component": "explore-uni.intakes",
+      "repeatable": false
+    },
+    "courses": {
+      "type": "component",
+      "component": "explore-uni.courses",
+      "repeatable": false
+    },
+    "cost_of_study": {
+      "type": "component",
+      "component": "explore-uni.cost-of-study",
+      "repeatable": false
+    },
+    "scholarship": {
+      "type": "component",
+      "component": "explore-uni.scholarships",
+      "repeatable": false
+    },
+    "admissions": {
+      "type": "component",
+      "component": "explore-uni.admissions",
+      "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "explore-uni.faq",
+      "repeatable": false
+    },
+    "placements": {
+      "type": "component",
+      "component": "explore-uni.placements",
+      "repeatable": false
+    },
+    "gallerys": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
 }

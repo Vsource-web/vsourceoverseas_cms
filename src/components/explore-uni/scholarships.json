@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_explore_uni_scholarships_s",
+  "info": {
+    "displayName": "Scholarships "
+  },
+  "options": {},
+  "attributes": {
+    "descriptions": {
+      "type": "component",
+      "component": "universities.uni-overview",
+      "repeatable": true
+    },
+    "scholarship_details": {
+      "type": "component",
+      "component": "explore-uni.scholarship-details",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

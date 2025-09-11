@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_explore_uni_courses",
+  "info": {
+    "displayName": "courses"
+  },
+  "options": {},
+  "attributes": {
+    "details": {
+      "type": "component",
+      "component": "universities.uni-overview",
+      "repeatable": true
+    },
+    "famous_courses": {
+      "type": "component",
+      "component": "explore-uni.courses-details",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

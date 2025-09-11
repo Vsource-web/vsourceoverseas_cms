@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_explore_uni_scholarship_details",
+  "info": {
+    "displayName": "scholarship_details"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

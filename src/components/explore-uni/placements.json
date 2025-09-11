@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_explore_uni_placements",
+  "info": {
+    "displayName": "placements"
+  },
+  "options": {},
+  "attributes": {
+    "descriptions": {
+      "type": "component",
+      "component": "universities.uni-overview",
+      "repeatable": true
+    },
+    "jobs": {
+      "type": "component",
+      "component": "explore-uni.jobs",
+      "repeatable": true
+    },
+    "carousel": {
+      "type": "component",
+      "component": "explore-uni.image-gallery",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

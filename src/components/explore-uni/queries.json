@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_explore_uni_queries",
+  "info": {
+    "displayName": "queries"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

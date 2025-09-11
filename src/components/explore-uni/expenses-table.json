@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_explore_uni_expenses_tables",
+  "info": {
+    "displayName": "expenses_table"
+  },
+  "options": {},
+  "attributes": {
+    "types_of_expenses": {
+      "type": "string"
+    },
+    "annual_expenses": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

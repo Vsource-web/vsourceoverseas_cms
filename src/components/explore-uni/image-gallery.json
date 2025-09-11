@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_explore_uni_image_galleries",
+  "info": {
+    "displayName": "image_gallery"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

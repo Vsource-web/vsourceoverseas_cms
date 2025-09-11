@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_explore_uni_faqs",
+  "info": {
+    "displayName": "faq"
+  },
+  "options": {},
+  "attributes": {
+    "accordion": {
+      "type": "component",
+      "component": "explore-uni.accordian",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_explore_uni_accordians",
+  "info": {
+    "displayName": "accordian"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

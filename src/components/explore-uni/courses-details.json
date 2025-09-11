@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_explore_uni_courses_details",
+  "info": {
+    "displayName": "courses_details"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "annual_fee": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

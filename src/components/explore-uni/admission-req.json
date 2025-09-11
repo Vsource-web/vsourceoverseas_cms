@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_explore_uni_admission_reqs",
+  "info": {
+    "displayName": "admission_req"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "descriptions": {
+      "type": "component",
+      "component": "universities.uni-overview",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
