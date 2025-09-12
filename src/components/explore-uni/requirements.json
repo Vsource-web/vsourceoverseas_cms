@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_explore_uni_requirements",
+  "info": {
+    "displayName": "requirements"
+  },
+  "options": {},
+  "attributes": {
+    "requirement_item": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

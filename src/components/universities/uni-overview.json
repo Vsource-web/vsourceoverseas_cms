@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "descriptions": {
+    "description": {
       "type": "richtext"
     }
   },

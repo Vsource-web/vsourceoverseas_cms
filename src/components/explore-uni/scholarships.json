@@ -5,15 +5,13 @@
   },
   "options": {},
   "attributes": {
-    "descriptions": {
-      "type": "component",
-      "component": "universities.uni-overview",
-      "repeatable": true
-    },
     "scholarship_details": {
       "type": "component",
       "component": "explore-uni.scholarship-details",
       "repeatable": true
+    },
+    "description": {
+      "type": "richtext"
     }
   },
   "config": {}

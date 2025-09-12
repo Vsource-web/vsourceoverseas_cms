@@ -5,15 +5,13 @@
   },
   "options": {},
   "attributes": {
-    "descriptions": {
-      "type": "component",
-      "component": "universities.uni-overview",
-      "repeatable": true
-    },
     "admissions_req": {
       "type": "component",
       "component": "explore-uni.admission-req",
       "repeatable": true
+    },
+    "description": {
+      "type": "richtext"
     }
   },
   "config": {}

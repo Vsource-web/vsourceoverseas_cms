@@ -8,9 +8,9 @@
     "title": {
       "type": "string"
     },
-    "descriptions": {
+    "requirement_items": {
       "type": "component",
-      "component": "universities.uni-overview",
+      "component": "explore-uni.requirements",
       "repeatable": true
     }
   },

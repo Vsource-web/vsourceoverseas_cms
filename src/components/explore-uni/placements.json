@@ -5,20 +5,23 @@
   },
   "options": {},
   "attributes": {
-    "descriptions": {
-      "type": "component",
-      "component": "universities.uni-overview",
-      "repeatable": true
-    },
     "jobs": {
       "type": "component",
       "component": "explore-uni.jobs",
       "repeatable": true
     },
-    "carousel": {
-      "type": "component",
-      "component": "explore-uni.image-gallery",
-      "repeatable": true
+    "top_recruiters_imgs": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
     }
   },
   "config": {}

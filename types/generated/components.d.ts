@@ -266,7 +266,10 @@ export interface ExploreUniAdmissionReq extends Struct.ComponentSchema {
     displayName: 'admission_req';
   };
   attributes: {
-    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    requirement_items: Schema.Attribute.Component<
+      'explore-uni.requirements',
+      true
+    >;
     title: Schema.Attribute.String;
   };
 }
@@ -281,7 +284,7 @@ export interface ExploreUniAdmissions extends Struct.ComponentSchema {
       'explore-uni.admission-req',
       true
     >;
-    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    description: Schema.Attribute.RichText;
   };
 }
 
@@ -299,7 +302,7 @@ export interface ExploreUniCostOfStudy extends Struct.ComponentSchema {
     displayName: 'cost_of_study';
   };
   attributes: {
-    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    description: Schema.Attribute.RichText;
     expenses_table: Schema.Attribute.Component<
       'explore-uni.expenses-table',
       true
@@ -313,7 +316,7 @@ export interface ExploreUniCourses extends Struct.ComponentSchema {
     displayName: 'courses';
   };
   attributes: {
-    details: Schema.Attribute.Component<'universities.uni-overview', true>;
+    description: Schema.Attribute.RichText;
     famous_courses: Schema.Attribute.Component<
       'explore-uni.courses-details',
       true
@@ -382,7 +385,7 @@ export interface ExploreUniImageGallery extends Struct.ComponentSchema {
     displayName: 'image_gallery';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images' | 'files'>;
+    images: Schema.Attribute.Media<'images' | 'files', true>;
   };
 }
 
@@ -420,7 +423,7 @@ export interface ExploreUniIntakes extends Struct.ComponentSchema {
     displayName: 'intakes';
   };
   attributes: {
-    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    description: Schema.Attribute.RichText;
     famous_intakes: Schema.Attribute.Component<
       'universities.why-studyin-cards',
       true
@@ -445,9 +448,12 @@ export interface ExploreUniPlacements extends Struct.ComponentSchema {
     displayName: 'placements';
   };
   attributes: {
-    carousel: Schema.Attribute.Component<'explore-uni.image-gallery', true>;
-    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    description: Schema.Attribute.RichText;
     jobs: Schema.Attribute.Component<'explore-uni.jobs', true>;
+    top_recruiters_imgs: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
   };
 }
 
@@ -467,8 +473,18 @@ export interface ExploreUniRanking extends Struct.ComponentSchema {
     displayName: 'ranking';
   };
   attributes: {
-    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    description: Schema.Attribute.RichText;
     items: Schema.Attribute.Component<'universities.why-studyin-cards', true>;
+  };
+}
+
+export interface ExploreUniRequirements extends Struct.ComponentSchema {
+  collectionName: 'components_explore_uni_requirements';
+  info: {
+    displayName: 'requirements';
+  };
+  attributes: {
+    requirement_item: Schema.Attribute.Text;
   };
 }
 
@@ -491,7 +507,7 @@ export interface ExploreUniScholarships extends Struct.ComponentSchema {
     displayName: 'Scholarships ';
   };
   attributes: {
-    descriptions: Schema.Attribute.Component<'universities.uni-overview', true>;
+    description: Schema.Attribute.RichText;
     scholarship_details: Schema.Attribute.Component<
       'explore-uni.scholarship-details',
       true
@@ -577,6 +593,7 @@ export interface UniversitiesLivingCostTuitionFee
   };
   attributes: {
     cities: Schema.Attribute.Component<'universities.cities', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -587,6 +604,7 @@ export interface UniversitiesOverview extends Struct.ComponentSchema {
   };
   attributes: {
     highlights: Schema.Attribute.Component<'universities.highlight', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -609,7 +627,7 @@ export interface UniversitiesStudentExprience extends Struct.ComponentSchema {
     displayName: 'student_exprience';
   };
   attributes: {
-    image: Schema.Attribute.Component<'universities.images', true>;
+    images: Schema.Attribute.Media<'images' | 'files', true>;
     subheading: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -642,7 +660,7 @@ export interface UniversitiesUniOverview extends Struct.ComponentSchema {
     displayName: 'uni_overview';
   };
   attributes: {
-    descriptions: Schema.Attribute.RichText;
+    description: Schema.Attribute.RichText;
   };
 }
 
@@ -731,6 +749,7 @@ declare module '@strapi/strapi' {
       'explore-uni.placements': ExploreUniPlacements;
       'explore-uni.queries': ExploreUniQueries;
       'explore-uni.ranking': ExploreUniRanking;
+      'explore-uni.requirements': ExploreUniRequirements;
       'explore-uni.scholarship-details': ExploreUniScholarshipDetails;
       'explore-uni.scholarships': ExploreUniScholarships;
       'universities.admissions': UniversitiesAdmissions;

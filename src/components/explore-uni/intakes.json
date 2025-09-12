@@ -5,10 +5,8 @@
   },
   "options": {},
   "attributes": {
-    "descriptions": {
-      "type": "component",
-      "component": "universities.uni-overview",
-      "repeatable": true
+    "description": {
+      "type": "richtext"
     },
     "famous_intakes": {
       "type": "component",

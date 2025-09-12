@@ -5,15 +5,13 @@
   },
   "options": {},
   "attributes": {
-    "descriptions": {
-      "type": "component",
-      "component": "universities.uni-overview",
-      "repeatable": true
-    },
     "expenses_table": {
       "type": "component",
       "component": "explore-uni.expenses-table",
       "repeatable": true
+    },
+    "description": {
+      "type": "richtext"
     }
   },
   "config": {}

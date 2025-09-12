@@ -5,6 +5,9 @@
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
     "cities": {
       "type": "component",
       "component": "universities.cities",

@@ -419,6 +419,7 @@ export interface ApiAbroadAbroad extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    key: Schema.Attribute.UID;
     Living_Cost_Tuition_Fee: Schema.Attribute.Component<
       'universities.living-cost-tuition-fee',
       false

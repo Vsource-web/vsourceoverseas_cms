@@ -5,16 +5,19 @@
   },
   "options": {},
   "attributes": {
-    "image": {
-      "type": "component",
-      "component": "universities.images",
-      "repeatable": true
-    },
     "title": {
       "type": "string"
     },
     "subheading": {
       "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   },
   "config": {}
