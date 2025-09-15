@@ -5,15 +5,14 @@
   },
   "options": {},
   "attributes": {
-    "view360": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "title": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "view360url": {
+      "type": "string"
     }
   },
   "config": {}

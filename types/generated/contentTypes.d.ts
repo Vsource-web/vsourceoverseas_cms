@@ -448,6 +448,36 @@ export interface ApiAbroadAbroad extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEnquireEnquire extends Struct.CollectionTypeSchema {
+  collectionName: 'enquires';
+  info: {
+    displayName: 'Enquire';
+    pluralName: 'enquires';
+    singularName: 'enquire';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::enquire.enquire'
+    > &
+      Schema.Attribute.Private;
+    number: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    service_required: Schema.Attribute.Text;
+    student_name: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGalleryGallery extends Struct.SingleTypeSchema {
   collectionName: 'galleries';
   info: {
@@ -1099,6 +1129,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::abroad.abroad': ApiAbroadAbroad;
+      'api::enquire.enquire': ApiEnquireEnquire;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::uni-directory.uni-directory': ApiUniDirectoryUniDirectory;

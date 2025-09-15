@@ -521,7 +521,9 @@ export interface GalleryGallery360 extends Struct.ComponentSchema {
     displayName: 'gallery_360';
   };
   attributes: {
-    view360: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subheading: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    view360url: Schema.Attribute.String;
   };
 }
 
