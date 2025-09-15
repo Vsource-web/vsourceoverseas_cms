@@ -515,6 +515,38 @@ export interface ExploreUniScholarships extends Struct.ComponentSchema {
   };
 }
 
+export interface GalleryGallery360 extends Struct.ComponentSchema {
+  collectionName: 'components_gallery_gallery_360s';
+  info: {
+    displayName: 'gallery_360';
+  };
+  attributes: {
+    view360: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface GalleryJourneyImages extends Struct.ComponentSchema {
+  collectionName: 'components_gallery_journey_images';
+  info: {
+    displayName: 'journey_images';
+  };
+  attributes: {
+    journey_images: Schema.Attribute.Media<'images' | 'files', true>;
+  };
+}
+
+export interface GalleryStudentImages extends Struct.ComponentSchema {
+  collectionName: 'components_gallery_student_images';
+  info: {
+    displayName: 'studentImages';
+  };
+  attributes: {
+    card_title: Schema.Attribute.Text;
+    card_title1: Schema.Attribute.Text;
+    students_images: Schema.Attribute.Media<'images' | 'files', true>;
+  };
+}
+
 export interface UniversitiesAdmissions extends Struct.ComponentSchema {
   collectionName: 'components_universities_admissions';
   info: {
@@ -752,6 +784,9 @@ declare module '@strapi/strapi' {
       'explore-uni.requirements': ExploreUniRequirements;
       'explore-uni.scholarship-details': ExploreUniScholarshipDetails;
       'explore-uni.scholarships': ExploreUniScholarships;
+      'gallery.gallery-360': GalleryGallery360;
+      'gallery.journey-images': GalleryJourneyImages;
+      'gallery.student-images': GalleryStudentImages;
       'universities.admissions': UniversitiesAdmissions;
       'universities.checklist': UniversitiesChecklist;
       'universities.cities': UniversitiesCities;

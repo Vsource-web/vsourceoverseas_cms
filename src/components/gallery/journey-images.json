@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_gallery_journey_images",
+  "info": {
+    "displayName": "journey_images"
+  },
+  "options": {},
+  "attributes": {
+    "journey_images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

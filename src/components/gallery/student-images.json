@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_gallery_student_images",
+  "info": {
+    "displayName": "studentImages"
+  },
+  "options": {},
+  "attributes": {
+    "card_title": {
+      "type": "text"
+    },
+    "card_title1": {
+      "type": "text"
+    },
+    "students_images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}
