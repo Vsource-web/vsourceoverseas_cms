@@ -1,0 +1,56 @@
+{
+  "kind": "singleType",
+  "collectionName": "fintech_landing_pages",
+  "info": {
+    "singularName": "fintech-landing-page",
+    "pluralName": "fintech-landing-pages",
+    "displayName": "Fintech_Landing_page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "text"
+    },
+    "mobile_bg_img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "country_names": {
+      "type": "json"
+    },
+    "mobile_sub_title": {
+      "type": "text"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "fintech.about-us",
+        "fintech.loan-disbursement",
+        "blocks.services",
+        "blocks.comprehensive",
+        "fintech.why-loan",
+        "fintech.banks",
+        "blocks.company",
+        "blocks.success-stories"
+      ]
+    }
+  }
+}

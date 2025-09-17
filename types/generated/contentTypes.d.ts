@@ -478,6 +478,52 @@ export interface ApiEnquireEnquire extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFintechLandingPageFintechLandingPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'fintech_landing_pages';
+  info: {
+    displayName: 'Fintech_Landing_page';
+    pluralName: 'fintech-landing-pages';
+    singularName: 'fintech-landing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'files' | 'images'>;
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        'fintech.about-us',
+        'fintech.loan-disbursement',
+        'blocks.services',
+        'blocks.comprehensive',
+        'fintech.why-loan',
+        'fintech.banks',
+        'blocks.company',
+        'blocks.success-stories',
+      ]
+    >;
+    country_names: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fintech-landing-page.fintech-landing-page'
+    > &
+      Schema.Attribute.Private;
+    mobile_bg_img: Schema.Attribute.Media<'images' | 'files'>;
+    mobile_sub_title: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    sub_title: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGalleryGallery extends Struct.SingleTypeSchema {
   collectionName: 'galleries';
   info: {
@@ -1130,6 +1176,7 @@ declare module '@strapi/strapi' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::abroad.abroad': ApiAbroadAbroad;
       'api::enquire.enquire': ApiEnquireEnquire;
+      'api::fintech-landing-page.fintech-landing-page': ApiFintechLandingPageFintechLandingPage;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::uni-directory.uni-directory': ApiUniDirectoryUniDirectory;

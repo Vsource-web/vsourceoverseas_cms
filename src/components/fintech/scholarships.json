@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_fintech_scholarships",
+  "info": {
+    "displayName": "scholarships"
+  },
+  "options": {},
+  "attributes": {
+    "student_name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

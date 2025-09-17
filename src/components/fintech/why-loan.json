@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_fintech_why_loans",
+  "info": {
+    "displayName": "why_loan"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "text"
+    },
+    "list_text": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "image_background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "success_number": {
+      "type": "component",
+      "component": "universities.why-studyin-cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
