@@ -1,11 +1,11 @@
 {
-  "collectionName": "components_blocks_success_stories",
+  "collectionName": "components_fintech_about_us_contents",
   "info": {
-    "displayName": "success_stories"
+    "displayName": "about_us_content"
   },
   "options": {},
   "attributes": {
-    "background_image": {
+    "gif": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -16,13 +16,8 @@
     "title": {
       "type": "string"
     },
-    "description": {
+    "sub_title": {
       "type": "text"
-    },
-    "testimonials": {
-      "type": "component",
-      "component": "elements.testimonial",
-      "repeatable": true
     }
   },
   "config": {}

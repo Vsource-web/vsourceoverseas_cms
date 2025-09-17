@@ -168,6 +168,7 @@ export interface BlocksSuccessStories extends Struct.ComponentSchema {
     displayName: 'success_stories';
   };
   attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
     description: Schema.Attribute.Text;
     testimonials: Schema.Attribute.Component<'elements.testimonial', true>;
     title: Schema.Attribute.String;
@@ -515,6 +516,98 @@ export interface ExploreUniScholarships extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_about_uses';
+  info: {
+    displayName: 'about_us';
+  };
+  attributes: {
+    about_number: Schema.Attribute.Component<'about-us.about-card', true>;
+    chairman: Schema.Attribute.Media<'images' | 'files'>;
+    content: Schema.Attribute.Component<'fintech.about-us-content', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface FintechAboutUsContent extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_about_us_contents';
+  info: {
+    displayName: 'about_us_content';
+  };
+  attributes: {
+    gif: Schema.Attribute.Media<'images' | 'files'>;
+    sub_title: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FintechBanks extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_banks';
+  info: {
+    displayName: 'banks';
+  };
+  attributes: {
+    bank: Schema.Attribute.Component<'fintech.banks-images', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface FintechBanksImages extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_banks_images';
+  info: {
+    displayName: 'banks_images';
+  };
+  attributes: {
+    logo: Schema.Attribute.Media<'images' | 'files'>;
+    name: Schema.Attribute.String;
+    path: Schema.Attribute.String;
+    slug: Schema.Attribute.String;
+  };
+}
+
+export interface FintechLoanDisbursement extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_loan_disbursements';
+  info: {
+    displayName: 'loan_disbursement';
+  };
+  attributes: {
+    scholarship: Schema.Attribute.Component<'fintech.scholarships', true>;
+    sub_title: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FintechScholarships extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_scholarships';
+  info: {
+    displayName: 'scholarships';
+  };
+  attributes: {
+    amount: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    student_name: Schema.Attribute.String;
+  };
+}
+
+export interface FintechWhyLoan extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_why_loans';
+  info: {
+    displayName: 'why_loan';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    image_background: Schema.Attribute.Media<'images' | 'files'>;
+    list_text: Schema.Attribute.Component<'universities.text', true>;
+    sub_title: Schema.Attribute.Text;
+    success_number: Schema.Attribute.Component<
+      'universities.why-studyin-cards',
+      true
+    >;
+  };
+}
+
 export interface GalleryGallery360 extends Struct.ComponentSchema {
   collectionName: 'components_gallery_gallery_360s';
   info: {
@@ -684,7 +777,7 @@ export interface UniversitiesText extends Struct.ComponentSchema {
     displayName: 'text';
   };
   attributes: {
-    text: Schema.Attribute.String;
+    lists: Schema.Attribute.String;
   };
 }
 
@@ -735,6 +828,7 @@ export interface UniversitiesWhyStudyinCards extends Struct.ComponentSchema {
     displayName: 'whyStudyin_cards';
   };
   attributes: {
+    bank: Schema.Attribute.Component<'fintech.banks-images', true>;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -786,6 +880,13 @@ declare module '@strapi/strapi' {
       'explore-uni.requirements': ExploreUniRequirements;
       'explore-uni.scholarship-details': ExploreUniScholarshipDetails;
       'explore-uni.scholarships': ExploreUniScholarships;
+      'fintech.about-us': FintechAboutUs;
+      'fintech.about-us-content': FintechAboutUsContent;
+      'fintech.banks': FintechBanks;
+      'fintech.banks-images': FintechBanksImages;
+      'fintech.loan-disbursement': FintechLoanDisbursement;
+      'fintech.scholarships': FintechScholarships;
+      'fintech.why-loan': FintechWhyLoan;
       'gallery.gallery-360': GalleryGallery360;
       'gallery.journey-images': GalleryJourneyImages;
       'gallery.student-images': GalleryStudentImages;

@@ -1,11 +1,11 @@
 {
-  "collectionName": "components_universities_why_studyin_cards",
+  "collectionName": "components_fintech_banks",
   "info": {
-    "displayName": "whyStudyin_cards"
+    "displayName": "banks"
   },
   "options": {},
   "attributes": {
-    "title": {
+    "heading": {
       "type": "string"
     },
     "description": {

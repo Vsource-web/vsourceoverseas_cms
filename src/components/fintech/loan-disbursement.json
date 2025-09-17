@@ -1,19 +1,19 @@
 {
-  "collectionName": "components_universities_why_studyin_cards",
+  "collectionName": "components_fintech_loan_disbursements",
   "info": {
-    "displayName": "whyStudyin_cards"
+    "displayName": "loan_disbursement"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "description": {
+    "sub_title": {
       "type": "text"
     },
-    "bank": {
+    "scholarship": {
       "type": "component",
-      "component": "fintech.banks-images",
+      "component": "fintech.scholarships",
       "repeatable": true
     }
   },
