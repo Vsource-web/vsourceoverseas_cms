@@ -1,23 +1,22 @@
 {
   "kind": "singleType",
-  "collectionName": "about_uses",
+  "collectionName": "fintech_about_uses",
   "info": {
-    "singularName": "about-us",
-    "pluralName": "about-uses",
-    "displayName": "about us"
+    "singularName": "fintech-about-us",
+    "pluralName": "fintech-about-uses",
+    "displayName": "fintech_About_us"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "about": {
+    "about_us": {
       "type": "dynamiczone",
       "components": [
-        "about-us.hero",
-        "about-us.about",
         "about-us.management-team",
-        "fintech.about-fintech"
+        "about-us.hero",
+        "about-us.about"
       ]
     }
   }
