@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_fintech_about_cards",
+  "info": {
+    "displayName": "about_cards"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}
