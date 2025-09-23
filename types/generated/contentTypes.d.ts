@@ -456,7 +456,7 @@ export interface ApiAbroadAbroad extends Struct.CollectionTypeSchema {
 export interface ApiEnquireEnquire extends Struct.CollectionTypeSchema {
   collectionName: 'enquires';
   info: {
-    displayName: 'Enquire';
+    displayName: 'Overseas Enquires';
     pluralName: 'enquires';
     singularName: 'enquire';
   };
@@ -508,6 +508,37 @@ export interface ApiFintechAboutUsFintechAboutUs
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFintechEnquireFintechEnquire
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fintech_enquires';
+  info: {
+    displayName: 'Fintech Enquire';
+    pluralName: 'fintech-enquires';
+    singularName: 'fintech-enquire';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fintech-enquire.fintech-enquire'
+    > &
+      Schema.Attribute.Private;
+    number: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    service_required: Schema.Attribute.String;
+    studentName: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1251,6 +1282,7 @@ declare module '@strapi/strapi' {
       'api::abroad.abroad': ApiAbroadAbroad;
       'api::enquire.enquire': ApiEnquireEnquire;
       'api::fintech-about-us.fintech-about-us': ApiFintechAboutUsFintechAboutUs;
+      'api::fintech-enquire.fintech-enquire': ApiFintechEnquireFintechEnquire;
       'api::fintech-landing-page.fintech-landing-page': ApiFintechLandingPageFintechLandingPage;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;

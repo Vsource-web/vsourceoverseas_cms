@@ -1,24 +1,24 @@
 {
   "kind": "collectionType",
-  "collectionName": "enquires",
+  "collectionName": "fintech_enquires",
   "info": {
-    "singularName": "enquire",
-    "pluralName": "enquires",
-    "displayName": "Overseas Enquires"
+    "singularName": "fintech-enquire",
+    "pluralName": "fintech-enquires",
+    "displayName": "Fintech Enquire"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "student_name": {
+    "studentName": {
       "type": "string"
     },
     "number": {
       "type": "string"
     },
     "service_required": {
-      "type": "text"
+      "type": "string"
     }
   }
 }

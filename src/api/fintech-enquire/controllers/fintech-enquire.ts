@@ -1,0 +1,7 @@
+/**
+ * fintech-enquire controller
+ */
+
+import { factories } from '@strapi/strapi'
+
+export default factories.createCoreController('api::fintech-enquire.fintech-enquire');
