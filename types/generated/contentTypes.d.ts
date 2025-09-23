@@ -612,6 +612,45 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOurPatnerOurPatner extends Struct.CollectionTypeSchema {
+  collectionName: 'our_patners';
+  info: {
+    displayName: 'Our Partners';
+    pluralName: 'our-patners';
+    singularName: 'our-patner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    bankImage: Schema.Attribute.Media<'images' | 'files'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    documents: Schema.Attribute.Component<'fintech.documents', true>;
+    eligibility: Schema.Attribute.Component<'fintech.eligibility', true>;
+    interstRate: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::our-patner.our-patner'
+    > &
+      Schema.Attribute.Private;
+    marginRate: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    serviceCharge: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    trustedBy: Schema.Attribute.Component<'fintech.trusted-by', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiUniDirectoryUniDirectory
   extends Struct.CollectionTypeSchema {
   collectionName: 'uni_directories';
@@ -1179,6 +1218,7 @@ declare module '@strapi/strapi' {
       'api::fintech-landing-page.fintech-landing-page': ApiFintechLandingPageFintechLandingPage;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::our-patner.our-patner': ApiOurPatnerOurPatner;
       'api::uni-directory.uni-directory': ApiUniDirectoryUniDirectory;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_fintech_documents",
+  "info": {
+    "displayName": "documents"
+  },
+  "options": {},
+  "attributes": {
+    "document": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

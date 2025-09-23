@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_fintech_trusted_bies",
+  "info": {
+    "displayName": "trustedBy"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "labelCount": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

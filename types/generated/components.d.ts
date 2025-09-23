@@ -566,6 +566,27 @@ export interface FintechBanksImages extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechDocuments extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_documents';
+  info: {
+    displayName: 'documents';
+  };
+  attributes: {
+    document: Schema.Attribute.String;
+  };
+}
+
+export interface FintechEligibility extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_eligibilities';
+  info: {
+    displayName: 'eligibility';
+  };
+  attributes: {
+    criteria: Schema.Attribute.String;
+    details: Schema.Attribute.Text;
+  };
+}
+
 export interface FintechLoanDisbursement extends Struct.ComponentSchema {
   collectionName: 'components_fintech_loan_disbursements';
   info: {
@@ -588,6 +609,18 @@ export interface FintechScholarships extends Struct.ComponentSchema {
     country: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files'>;
     student_name: Schema.Attribute.String;
+  };
+}
+
+export interface FintechTrustedBy extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_trusted_bies';
+  info: {
+    displayName: 'trustedBy';
+  };
+  attributes: {
+    icon: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    labelCount: Schema.Attribute.String;
   };
 }
 
@@ -884,8 +917,11 @@ declare module '@strapi/strapi' {
       'fintech.about-us-content': FintechAboutUsContent;
       'fintech.banks': FintechBanks;
       'fintech.banks-images': FintechBanksImages;
+      'fintech.documents': FintechDocuments;
+      'fintech.eligibility': FintechEligibility;
       'fintech.loan-disbursement': FintechLoanDisbursement;
       'fintech.scholarships': FintechScholarships;
+      'fintech.trusted-by': FintechTrustedBy;
       'fintech.why-loan': FintechWhyLoan;
       'gallery.gallery-360': GalleryGallery360;
       'gallery.journey-images': GalleryJourneyImages;

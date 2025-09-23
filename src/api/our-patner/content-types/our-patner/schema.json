@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_patners",
+  "info": {
+    "singularName": "our-patner",
+    "pluralName": "our-patners",
+    "displayName": "Our Partners"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "interstRate": {
+      "type": "string"
+    },
+    "serviceCharge": {
+      "type": "string"
+    },
+    "marginRate": {
+      "type": "string"
+    },
+    "bankImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "trustedBy": {
+      "type": "component",
+      "component": "fintech.trusted-by",
+      "repeatable": true
+    },
+    "documents": {
+      "type": "component",
+      "component": "fintech.documents",
+      "repeatable": true
+    },
+    "eligibility": {
+      "type": "component",
+      "component": "fintech.eligibility",
+      "repeatable": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
