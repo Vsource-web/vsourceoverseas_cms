@@ -10,11 +10,6 @@
     },
     "description": {
       "type": "text"
-    },
-    "bank": {
-      "type": "component",
-      "component": "fintech.banks-images",
-      "repeatable": true
     }
   },
   "config": {}

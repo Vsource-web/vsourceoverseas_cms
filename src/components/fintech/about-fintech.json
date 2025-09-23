@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_fintech_about_finteches",
+  "info": {
+    "displayName": "about_fintech"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subheadings": {
+      "type": "component",
+      "component": "about-us.subheadings",
+      "repeatable": true
+    },
+    "about_cards": {
+      "type": "component",
+      "component": "about-us.about-card",
+      "repeatable": true
+    },
+    "chairman": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

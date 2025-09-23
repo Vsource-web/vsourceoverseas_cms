@@ -385,7 +385,12 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
   };
   attributes: {
     about: Schema.Attribute.DynamicZone<
-      ['about-us.hero', 'about-us.about', 'about-us.management-team']
+      [
+        'about-us.hero',
+        'about-us.about',
+        'about-us.management-team',
+        'fintech.about-fintech',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -478,6 +483,37 @@ export interface ApiEnquireEnquire extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFintechAboutUsFintechAboutUs
+  extends Struct.SingleTypeSchema {
+  collectionName: 'fintech_about_uses';
+  info: {
+    displayName: 'fintech_About_us';
+    pluralName: 'fintech-about-uses';
+    singularName: 'fintech-about-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about_us: Schema.Attribute.DynamicZone<
+      ['about-us.management-team', 'about-us.hero', 'about-us.about']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fintech-about-us.fintech-about-us'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFintechLandingPageFintechLandingPage
   extends Struct.SingleTypeSchema {
   collectionName: 'fintech_landing_pages';
@@ -500,7 +536,6 @@ export interface ApiFintechLandingPageFintechLandingPage
         'fintech.why-loan',
         'fintech.banks',
         'blocks.company',
-        'blocks.success-stories',
       ]
     >;
     country_names: Schema.Attribute.JSON;
@@ -1215,6 +1250,7 @@ declare module '@strapi/strapi' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::abroad.abroad': ApiAbroadAbroad;
       'api::enquire.enquire': ApiEnquireEnquire;
+      'api::fintech-about-us.fintech-about-us': ApiFintechAboutUsFintechAboutUs;
       'api::fintech-landing-page.fintech-landing-page': ApiFintechLandingPageFintechLandingPage;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;

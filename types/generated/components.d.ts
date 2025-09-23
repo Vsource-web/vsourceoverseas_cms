@@ -516,6 +516,30 @@ export interface ExploreUniScholarships extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechAboutCards extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_about_cards';
+  info: {
+    displayName: 'about_cards';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface FintechAboutFintech extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_about_finteches';
+  info: {
+    displayName: 'about_fintech';
+  };
+  attributes: {
+    about_cards: Schema.Attribute.Component<'about-us.about-card', true>;
+    chairman: Schema.Attribute.Media<'images' | 'files'>;
+    description: Schema.Attribute.Text;
+    subheadings: Schema.Attribute.Component<'about-us.subheadings', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface FintechAboutUs extends Struct.ComponentSchema {
   collectionName: 'components_fintech_about_uses';
   info: {
@@ -587,6 +611,14 @@ export interface FintechEligibility extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechFintechAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_fintech_about_uses';
+  info: {
+    displayName: 'fintech_About_us';
+  };
+  attributes: {};
+}
+
 export interface FintechLoanDisbursement extends Struct.ComponentSchema {
   collectionName: 'components_fintech_loan_disbursements';
   info: {
@@ -609,6 +641,16 @@ export interface FintechScholarships extends Struct.ComponentSchema {
     country: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files'>;
     student_name: Schema.Attribute.String;
+  };
+}
+
+export interface FintechSubheadings extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_subheadings';
+  info: {
+    displayName: 'subheadings';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
   };
 }
 
@@ -861,7 +903,6 @@ export interface UniversitiesWhyStudyinCards extends Struct.ComponentSchema {
     displayName: 'whyStudyin_cards';
   };
   attributes: {
-    bank: Schema.Attribute.Component<'fintech.banks-images', true>;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -913,14 +954,18 @@ declare module '@strapi/strapi' {
       'explore-uni.requirements': ExploreUniRequirements;
       'explore-uni.scholarship-details': ExploreUniScholarshipDetails;
       'explore-uni.scholarships': ExploreUniScholarships;
+      'fintech.about-cards': FintechAboutCards;
+      'fintech.about-fintech': FintechAboutFintech;
       'fintech.about-us': FintechAboutUs;
       'fintech.about-us-content': FintechAboutUsContent;
       'fintech.banks': FintechBanks;
       'fintech.banks-images': FintechBanksImages;
       'fintech.documents': FintechDocuments;
       'fintech.eligibility': FintechEligibility;
+      'fintech.fintech-about-us': FintechFintechAboutUs;
       'fintech.loan-disbursement': FintechLoanDisbursement;
       'fintech.scholarships': FintechScholarships;
+      'fintech.subheadings': FintechSubheadings;
       'fintech.trusted-by': FintechTrustedBy;
       'fintech.why-loan': FintechWhyLoan;
       'gallery.gallery-360': GalleryGallery360;
