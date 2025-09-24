@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_fintech_list_checks",
+  "info": {
+    "displayName": "list_check"
+  },
+  "options": {},
+  "attributes": {
+    "list": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

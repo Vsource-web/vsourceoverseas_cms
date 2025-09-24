@@ -1,0 +1,72 @@
+{
+  "collectionName": "components_fintech_aborad_educations",
+  "info": {
+    "displayName": "aborad_education"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "list": {
+      "type": "component",
+      "component": "fintech.list-check",
+      "repeatable": true
+    },
+    "heading1": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "desktop_img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "mobile_img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "heading2": {
+      "type": "string"
+    },
+    "eligible_description": {
+      "type": "text"
+    },
+    "eligible": {
+      "type": "component",
+      "component": "fintech.eligible-table",
+      "repeatable": true
+    },
+    "bank": {
+      "type": "component",
+      "component": "fintech.banks",
+      "repeatable": false
+    },
+    "heading_schemes": {
+      "type": "string"
+    },
+    "schemes_lenders": {
+      "type": "component",
+      "component": "fintech.schemes-lenders",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

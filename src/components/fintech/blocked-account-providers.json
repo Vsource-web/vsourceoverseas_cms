@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_fintech_blocked_account_providers",
+  "info": {
+    "displayName": "blocked_account_providers"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "list": {
+      "type": "component",
+      "component": "fintech.list-check",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

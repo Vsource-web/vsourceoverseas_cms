@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_fintech_contents",
+  "info": {
+    "displayName": "content"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "list": {
+      "type": "component",
+      "component": "fintech.list-check",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

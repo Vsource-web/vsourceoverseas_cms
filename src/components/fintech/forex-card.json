@@ -1,0 +1,73 @@
+{
+  "collectionName": "components_fintech_forex_cards",
+  "info": {
+    "displayName": "forex_card"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "partner_heading": {
+      "type": "string"
+    },
+    "partner_description": {
+      "type": "text"
+    },
+    "partner_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "works_heading": {
+      "type": "string"
+    },
+    "work_description": {
+      "type": "text"
+    },
+    "works": {
+      "type": "component",
+      "component": "fintech.work",
+      "repeatable": true
+    },
+    "benefits_heading": {
+      "type": "text"
+    },
+    "benfits": {
+      "type": "component",
+      "component": "fintech.benefits",
+      "repeatable": true
+    },
+    "card_management_heading": {
+      "type": "text"
+    },
+    "management": {
+      "type": "component",
+      "component": "fintech.benefits",
+      "repeatable": true
+    },
+    "Features_heading": {
+      "type": "text"
+    },
+    "features": {
+      "type": "component",
+      "component": "fintech.features",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

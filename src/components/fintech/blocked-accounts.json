@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_fintech_blocked_accounts",
+  "info": {
+    "displayName": "blocked_accounts"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "faq": {
+      "type": "component",
+      "component": "fintech.faq-block-account",
+      "repeatable": true
+    },
+    "provider_heading": {
+      "type": "string"
+    },
+    "blocked_account_providers": {
+      "type": "component",
+      "component": "fintech.blocked-account-providers",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

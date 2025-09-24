@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_fintech_insurances",
+  "info": {
+    "displayName": "Insurance"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "countrys": {
+      "type": "component",
+      "component": "fintech.countrys",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

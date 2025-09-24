@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_fintech_sub_topics",
+  "info": {
+    "displayName": "sub_topics"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

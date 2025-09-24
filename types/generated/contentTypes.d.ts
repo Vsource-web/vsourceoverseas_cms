@@ -717,6 +717,46 @@ export interface ApiOurPatnerOurPatner extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOurServiceOurService extends Struct.SingleTypeSchema {
+  collectionName: 'our_services';
+  info: {
+    displayName: 'Our Service';
+    pluralName: 'our-services';
+    singularName: 'our-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::our-service.our-service'
+    > &
+      Schema.Attribute.Private;
+    our_services: Schema.Attribute.DynamicZone<
+      [
+        'fintech.education-loan',
+        'fintech.aborad-education',
+        'fintech.credit-card',
+        'fintech.blocked-accounts',
+        'fintech.bank-account',
+        'fintech.forex-card',
+        'fintech.sim-cards',
+        'fintech.insurance',
+        'fintech.gic',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiUniDirectoryUniDirectory
   extends Struct.CollectionTypeSchema {
   collectionName: 'uni_directories';
@@ -1287,6 +1327,7 @@ declare module '@strapi/strapi' {
       'api::gallery.gallery': ApiGalleryGallery;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::our-patner.our-patner': ApiOurPatnerOurPatner;
+      'api::our-service.our-service': ApiOurServiceOurService;
       'api::uni-directory.uni-directory': ApiUniDirectoryUniDirectory;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

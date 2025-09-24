@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_fintech_schemes_lenders",
+  "info": {
+    "displayName": "Schemes_Lenders"
+  },
+  "options": {},
+  "attributes": {
+    "bank": {
+      "type": "string"
+    },
+    "scheme": {
+      "type": "text"
+    },
+    "tenure": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

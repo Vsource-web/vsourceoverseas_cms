@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_fintech_top_banks",
+  "info": {
+    "displayName": "top_bank"
+  },
+  "options": {},
+  "attributes": {
+    "country": {
+      "type": "string"
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "list": {
+      "type": "component",
+      "component": "fintech.list-check",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

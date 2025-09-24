@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_fintech_sim_cards",
+  "info": {
+    "displayName": "SIM_cards"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "providers_heading": {
+      "type": "string"
+    },
+    "providers_description": {
+      "type": "text"
+    },
+    "Providers": {
+      "type": "component",
+      "component": "fintech.list-check",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
