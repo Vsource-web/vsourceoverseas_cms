@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_fintech_financial_cards",
+  "info": {
+    "displayName": "financial_card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "shortHead": {
+      "type": "string"
+    },
+    "shortContent": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "points": {
+      "type": "component",
+      "component": "fintech.list-check",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

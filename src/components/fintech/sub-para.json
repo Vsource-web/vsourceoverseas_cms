@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_fintech_sub_paras",
+  "info": {
+    "displayName": "sub_para"
+  },
+  "options": {},
+  "attributes": {
+    "paras": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

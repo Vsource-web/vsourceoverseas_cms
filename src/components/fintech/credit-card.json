@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_fintech_credit_cards",
+  "info": {
+    "displayName": "credit_card"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "list": {
+      "type": "component",
+      "component": "fintech.list-check",
+      "repeatable": true
+    },
+    "partner_heading": {
+      "type": "text"
+    },
+    "partner_description": {
+      "type": "text"
+    },
+    "partner_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "works_heading": {
+      "type": "string"
+    },
+    "work_description": {
+      "type": "text"
+    },
+    "works_card": {
+      "type": "component",
+      "component": "fintech.works-card",
+      "repeatable": true
+    },
+    "financial_heading": {
+      "type": "string"
+    },
+    "financial_card": {
+      "type": "component",
+      "component": "fintech.financial-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

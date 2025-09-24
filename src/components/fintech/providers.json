@@ -1,14 +1,14 @@
 {
-  "collectionName": "components_fintech_trusted_bies",
+  "collectionName": "components_fintech_providers",
   "info": {
-    "displayName": "trustedBy"
+    "displayName": "providers"
   },
   "options": {},
   "attributes": {
-    "label": {
+    "providerId": {
       "type": "string"
     },
-    "labelCount": {
+    "name": {
       "type": "string"
     }
   },

@@ -516,6 +516,31 @@ export interface ExploreUniScholarships extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechAboradEducation extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_aborad_educations';
+  info: {
+    displayName: 'aborad_education';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    bank: Schema.Attribute.Component<'fintech.banks', false>;
+    description: Schema.Attribute.RichText;
+    desktop_img: Schema.Attribute.Media<'files' | 'images'>;
+    eligible: Schema.Attribute.Component<'fintech.eligible-table', true>;
+    eligible_description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    heading_schemes: Schema.Attribute.String;
+    heading1: Schema.Attribute.String;
+    heading2: Schema.Attribute.String;
+    list: Schema.Attribute.Component<'fintech.list-check', true>;
+    mobile_img: Schema.Attribute.Media<'images' | 'files'>;
+    schemes_lenders: Schema.Attribute.Component<
+      'fintech.schemes-lenders',
+      true
+    >;
+  };
+}
+
 export interface FintechAboutCards extends Struct.ComponentSchema {
   collectionName: 'components_fintech_about_cards';
   info: {
@@ -565,6 +590,20 @@ export interface FintechAboutUsContent extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechBankAccount extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_bank_accounts';
+  info: {
+    displayName: 'bank_account';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    top_bank_heading: Schema.Attribute.String;
+    top_banks: Schema.Attribute.Component<'fintech.top-bank', true>;
+  };
+}
+
 export interface FintechBanks extends Struct.ComponentSchema {
   collectionName: 'components_fintech_banks';
   info: {
@@ -590,6 +629,110 @@ export interface FintechBanksImages extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechBenefits extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_benefits';
+  info: {
+    displayName: 'benefits';
+  };
+  attributes: {
+    list: Schema.Attribute.Component<'fintech.list-check', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FintechBenfits extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_benfits';
+  info: {
+    displayName: 'benfits';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface FintechBlockedAccountProviders extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_blocked_account_providers';
+  info: {
+    displayName: 'blocked_account_providers';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    list: Schema.Attribute.Component<'fintech.list-check', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FintechBlockedAccounts extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_blocked_accounts';
+  info: {
+    displayName: 'blocked_accounts';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    blocked_account_providers: Schema.Attribute.Component<
+      'fintech.blocked-account-providers',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    faq: Schema.Attribute.Component<'fintech.faq-block-account', true>;
+    heading: Schema.Attribute.Text;
+    provider_heading: Schema.Attribute.String;
+  };
+}
+
+export interface FintechContent extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_contents';
+  info: {
+    displayName: 'content';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    list: Schema.Attribute.Component<'fintech.list-check', true>;
+  };
+}
+
+export interface FintechCountrys extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_countrys';
+  info: {
+    displayName: 'countrys';
+  };
+  attributes: {
+    currency: Schema.Attribute.String;
+    description: Schema.Attribute.RichText;
+    name: Schema.Attribute.String;
+    providers: Schema.Attribute.Component<'fintech.providers', true>;
+    providersLine: Schema.Attribute.Text;
+    sections: Schema.Attribute.Component<'fintech.sections', true>;
+    short: Schema.Attribute.String;
+  };
+}
+
+export interface FintechCreditCard extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_credit_cards';
+  info: {
+    displayName: 'credit_card';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'files' | 'images'>;
+    description: Schema.Attribute.Text;
+    financial_card: Schema.Attribute.Component<'fintech.financial-card', true>;
+    financial_heading: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    list: Schema.Attribute.Component<'fintech.list-check', true>;
+    partner_description: Schema.Attribute.Text;
+    partner_heading: Schema.Attribute.Text;
+    partner_image: Schema.Attribute.Media<'images' | 'files'>;
+    work_description: Schema.Attribute.Text;
+    works_card: Schema.Attribute.Component<'fintech.works-card', true>;
+    works_heading: Schema.Attribute.String;
+  };
+}
+
 export interface FintechDocuments extends Struct.ComponentSchema {
   collectionName: 'components_fintech_documents';
   info: {
@@ -597,6 +740,23 @@ export interface FintechDocuments extends Struct.ComponentSchema {
   };
   attributes: {
     document: Schema.Attribute.String;
+  };
+}
+
+export interface FintechEducationLoan extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_education_loans';
+  info: {
+    displayName: 'education_loan';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    description: Schema.Attribute.RichText;
+    faq_detail: Schema.Attribute.Component<'fintech.faq-details', true>;
+    faq_heading: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    lists: Schema.Attribute.Component<'fintech.list-check', true>;
+    sub_heading: Schema.Attribute.String;
+    sub_topic: Schema.Attribute.Component<'fintech.sub-topics', true>;
   };
 }
 
@@ -611,12 +771,136 @@ export interface FintechEligibility extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechEligibleTable extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_eligible_tables';
+  info: {
+    displayName: 'eligible_table';
+  };
+  attributes: {
+    criteria: Schema.Attribute.String;
+    details: Schema.Attribute.Text;
+  };
+}
+
+export interface FintechFaqBlockAccount extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_faq_block_accounts';
+  info: {
+    displayName: 'faq_block_account';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'fintech.content', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FintechFaqDetails extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_faq_details';
+  info: {
+    displayName: 'faq_details';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface FintechFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_features';
+  info: {
+    displayName: 'features';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface FintechFinancialCard extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_financial_cards';
+  info: {
+    displayName: 'financial_card';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    points: Schema.Attribute.Component<'fintech.list-check', true>;
+    shortContent: Schema.Attribute.Text;
+    shortHead: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface FintechFintechAboutUs extends Struct.ComponentSchema {
   collectionName: 'components_fintech_fintech_about_uses';
   info: {
     displayName: 'fintech_About_us';
   };
   attributes: {};
+}
+
+export interface FintechForexCard extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_forex_cards';
+  info: {
+    displayName: 'forex_card';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    benefits_heading: Schema.Attribute.Text;
+    benfits: Schema.Attribute.Component<'fintech.benefits', true>;
+    card_management_heading: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'fintech.features', true>;
+    Features_heading: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    management: Schema.Attribute.Component<'fintech.benefits', true>;
+    partner_description: Schema.Attribute.Text;
+    partner_heading: Schema.Attribute.String;
+    partner_image: Schema.Attribute.Media<'images' | 'files'>;
+    work_description: Schema.Attribute.Text;
+    works: Schema.Attribute.Component<'fintech.work', true>;
+    works_heading: Schema.Attribute.String;
+  };
+}
+
+export interface FintechGic extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_gics';
+  info: {
+    displayName: 'GIC';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    description: Schema.Attribute.Text;
+    description2: Schema.Attribute.Text;
+    heading: Schema.Attribute.Text;
+    Requirement_heading: Schema.Attribute.String;
+    Requirement_list: Schema.Attribute.Component<
+      'fintech.requirement-list',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FintechInsurance extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_insurances';
+  info: {
+    displayName: 'Insurance';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    countrys: Schema.Attribute.Component<'fintech.countrys', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface FintechListCheck extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_list_checks';
+  info: {
+    displayName: 'list_check';
+  };
+  attributes: {
+    list: Schema.Attribute.String;
+  };
 }
 
 export interface FintechLoanDisbursement extends Struct.ComponentSchema {
@@ -628,6 +912,48 @@ export interface FintechLoanDisbursement extends Struct.ComponentSchema {
     scholarship: Schema.Attribute.Component<'fintech.scholarships', true>;
     sub_title: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface FintechProviders extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_providers';
+  info: {
+    displayName: 'providers';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    providerId: Schema.Attribute.String;
+  };
+}
+
+export interface FintechRequirementList extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_requirement_lists';
+  info: {
+    displayName: 'Requirement_list';
+  };
+  attributes: {};
+}
+
+export interface FintechRows extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_rows';
+  info: {
+    displayName: 'rows';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    values: Schema.Attribute.Component<'fintech.values', true>;
+  };
+}
+
+export interface FintechSchemesLenders extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_schemes_lenders';
+  info: {
+    displayName: 'Schemes_Lenders';
+  };
+  attributes: {
+    bank: Schema.Attribute.String;
+    scheme: Schema.Attribute.Text;
+    tenure: Schema.Attribute.String;
   };
 }
 
@@ -644,6 +970,53 @@ export interface FintechScholarships extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechSections extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_sections';
+  info: {
+    displayName: 'sections';
+  };
+  attributes: {
+    rows: Schema.Attribute.Component<'fintech.rows', true>;
+    section: Schema.Attribute.String;
+  };
+}
+
+export interface FintechSimCards extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_sim_cards';
+  info: {
+    displayName: 'SIM_cards';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    Providers: Schema.Attribute.Component<'fintech.list-check', true>;
+    providers_description: Schema.Attribute.Text;
+    providers_heading: Schema.Attribute.String;
+  };
+}
+
+export interface FintechSubPara extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_sub_paras';
+  info: {
+    displayName: 'sub_para';
+  };
+  attributes: {
+    paras: Schema.Attribute.Text;
+  };
+}
+
+export interface FintechSubTopics extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_sub_topics';
+  info: {
+    displayName: 'sub_topics';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface FintechSubheadings extends Struct.ComponentSchema {
   collectionName: 'components_fintech_subheadings';
   info: {
@@ -654,15 +1027,37 @@ export interface FintechSubheadings extends Struct.ComponentSchema {
   };
 }
 
+export interface FintechTopBank extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_top_banks';
+  info: {
+    displayName: 'top_bank';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images' | 'files'>;
+    country: Schema.Attribute.String;
+    list: Schema.Attribute.Component<'fintech.list-check', true>;
+  };
+}
+
 export interface FintechTrustedBy extends Struct.ComponentSchema {
   collectionName: 'components_fintech_trusted_bies';
   info: {
     displayName: 'trustedBy';
   };
   attributes: {
-    icon: Schema.Attribute.String;
     label: Schema.Attribute.String;
     labelCount: Schema.Attribute.String;
+  };
+}
+
+export interface FintechValues extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_values';
+  info: {
+    displayName: 'values';
+  };
+  attributes: {
+    providerId: Schema.Attribute.String;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -680,6 +1075,28 @@ export interface FintechWhyLoan extends Struct.ComponentSchema {
       'universities.why-studyin-cards',
       true
     >;
+  };
+}
+
+export interface FintechWork extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_works';
+  info: {
+    displayName: 'work';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FintechWorksCard extends Struct.ComponentSchema {
+  collectionName: 'components_fintech_works_cards';
+  info: {
+    displayName: 'works_card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
   };
 }
 
@@ -954,20 +1371,51 @@ declare module '@strapi/strapi' {
       'explore-uni.requirements': ExploreUniRequirements;
       'explore-uni.scholarship-details': ExploreUniScholarshipDetails;
       'explore-uni.scholarships': ExploreUniScholarships;
+      'fintech.aborad-education': FintechAboradEducation;
       'fintech.about-cards': FintechAboutCards;
       'fintech.about-fintech': FintechAboutFintech;
       'fintech.about-us': FintechAboutUs;
       'fintech.about-us-content': FintechAboutUsContent;
+      'fintech.bank-account': FintechBankAccount;
       'fintech.banks': FintechBanks;
       'fintech.banks-images': FintechBanksImages;
+      'fintech.benefits': FintechBenefits;
+      'fintech.benfits': FintechBenfits;
+      'fintech.blocked-account-providers': FintechBlockedAccountProviders;
+      'fintech.blocked-accounts': FintechBlockedAccounts;
+      'fintech.content': FintechContent;
+      'fintech.countrys': FintechCountrys;
+      'fintech.credit-card': FintechCreditCard;
       'fintech.documents': FintechDocuments;
+      'fintech.education-loan': FintechEducationLoan;
       'fintech.eligibility': FintechEligibility;
+      'fintech.eligible-table': FintechEligibleTable;
+      'fintech.faq-block-account': FintechFaqBlockAccount;
+      'fintech.faq-details': FintechFaqDetails;
+      'fintech.features': FintechFeatures;
+      'fintech.financial-card': FintechFinancialCard;
       'fintech.fintech-about-us': FintechFintechAboutUs;
+      'fintech.forex-card': FintechForexCard;
+      'fintech.gic': FintechGic;
+      'fintech.insurance': FintechInsurance;
+      'fintech.list-check': FintechListCheck;
       'fintech.loan-disbursement': FintechLoanDisbursement;
+      'fintech.providers': FintechProviders;
+      'fintech.requirement-list': FintechRequirementList;
+      'fintech.rows': FintechRows;
+      'fintech.schemes-lenders': FintechSchemesLenders;
       'fintech.scholarships': FintechScholarships;
+      'fintech.sections': FintechSections;
+      'fintech.sim-cards': FintechSimCards;
+      'fintech.sub-para': FintechSubPara;
+      'fintech.sub-topics': FintechSubTopics;
       'fintech.subheadings': FintechSubheadings;
+      'fintech.top-bank': FintechTopBank;
       'fintech.trusted-by': FintechTrustedBy;
+      'fintech.values': FintechValues;
       'fintech.why-loan': FintechWhyLoan;
+      'fintech.work': FintechWork;
+      'fintech.works-card': FintechWorksCard;
       'gallery.gallery-360': GalleryGallery360;
       'gallery.journey-images': GalleryJourneyImages;
       'gallery.student-images': GalleryStudentImages;

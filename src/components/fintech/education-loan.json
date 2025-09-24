@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_fintech_education_loans",
+  "info": {
+    "displayName": "education_loan"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "lists": {
+      "type": "component",
+      "component": "fintech.list-check",
+      "repeatable": true
+    },
+    "sub_heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "sub_topic": {
+      "type": "component",
+      "component": "fintech.sub-topics",
+      "repeatable": true
+    },
+    "faq_heading": {
+      "type": "string"
+    },
+    "faq_detail": {
+      "type": "component",
+      "component": "fintech.faq-details",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

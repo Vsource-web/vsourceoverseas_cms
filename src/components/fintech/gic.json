@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_fintech_gics",
+  "info": {
+    "displayName": "GIC"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "Requirement_heading": {
+      "type": "string"
+    },
+    "Requirement_list": {
+      "type": "component",
+      "component": "fintech.requirement-list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

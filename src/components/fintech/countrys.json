@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_fintech_countrys",
+  "info": {
+    "displayName": "countrys"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "short": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "providersLine": {
+      "type": "text"
+    },
+    "providers": {
+      "type": "component",
+      "component": "fintech.providers",
+      "repeatable": true
+    },
+    "sections": {
+      "type": "component",
+      "component": "fintech.sections",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_fintech_bank_accounts",
+  "info": {
+    "displayName": "bank_account"
+  },
+  "options": {},
+  "attributes": {
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "top_bank_heading": {
+      "type": "string"
+    },
+    "top_banks": {
+      "type": "component",
+      "component": "fintech.top-bank",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

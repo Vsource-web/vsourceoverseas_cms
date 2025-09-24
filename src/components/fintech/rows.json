@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_fintech_rows",
+  "info": {
+    "displayName": "rows"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "values": {
+      "type": "component",
+      "component": "fintech.values",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

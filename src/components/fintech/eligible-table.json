@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_fintech_eligible_tables",
+  "info": {
+    "displayName": "eligible_table"
+  },
+  "options": {},
+  "attributes": {
+    "criteria": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

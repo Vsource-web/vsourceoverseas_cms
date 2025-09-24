@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_fintech_faq_block_accounts",
+  "info": {
+    "displayName": "faq_block_account"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "component",
+      "component": "fintech.content",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
