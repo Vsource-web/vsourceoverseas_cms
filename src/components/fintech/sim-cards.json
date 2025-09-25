@@ -25,10 +25,8 @@
     "providers_description": {
       "type": "text"
     },
-    "Providers": {
-      "type": "component",
-      "component": "fintech.list-check",
-      "repeatable": true
+    "provider_list": {
+      "type": "richtext"
     }
   },
   "config": {}
