@@ -14,7 +14,7 @@
       ]
     },
     "count": {
-      "type": "biginteger"
+      "type": "string"
     },
     "text": {
       "type": "string"
