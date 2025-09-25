@@ -658,9 +658,12 @@ export interface FintechBlockedAccountProviders extends Struct.ComponentSchema {
     displayName: 'blocked_account_providers';
   };
   attributes: {
+    banking_model: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files'>;
-    list: Schema.Attribute.Component<'fintech.list-check', true>;
+    monthly_fee: Schema.Attribute.String;
+    processing_fee: Schema.Attribute.String;
+    processing_time: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -872,10 +875,7 @@ export interface FintechGic extends Struct.ComponentSchema {
     description2: Schema.Attribute.Text;
     heading: Schema.Attribute.Text;
     Requirement_heading: Schema.Attribute.String;
-    Requirement_list: Schema.Attribute.Component<
-      'fintech.requirement-list',
-      true
-    >;
+    requirement_lists: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
   };
 }
@@ -990,7 +990,7 @@ export interface FintechSimCards extends Struct.ComponentSchema {
     background_image: Schema.Attribute.Media<'images' | 'files'>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
-    Providers: Schema.Attribute.Component<'fintech.list-check', true>;
+    provider_list: Schema.Attribute.RichText;
     providers_description: Schema.Attribute.Text;
     providers_heading: Schema.Attribute.String;
   };

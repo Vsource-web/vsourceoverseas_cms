@@ -28,10 +28,8 @@
     "Requirement_heading": {
       "type": "string"
     },
-    "Requirement_list": {
-      "type": "component",
-      "component": "fintech.requirement-list",
-      "repeatable": true
+    "requirement_lists": {
+      "type": "richtext"
     }
   },
   "config": {}

@@ -19,10 +19,17 @@
     "description": {
       "type": "text"
     },
-    "list": {
-      "type": "component",
-      "component": "fintech.list-check",
-      "repeatable": true
+    "processing_fee": {
+      "type": "string"
+    },
+    "monthly_fee": {
+      "type": "string"
+    },
+    "processing_time": {
+      "type": "string"
+    },
+    "banking_model": {
+      "type": "string"
     }
   },
   "config": {}
