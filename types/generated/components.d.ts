@@ -20,7 +20,7 @@ export interface AboutUsAboutCard extends Struct.ComponentSchema {
     displayName: 'about_card';
   };
   attributes: {
-    count: Schema.Attribute.BigInteger;
+    count: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files'>;
     text: Schema.Attribute.String;
   };
