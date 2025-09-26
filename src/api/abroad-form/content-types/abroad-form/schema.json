@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abroad_forms",
+  "info": {
+    "singularName": "abroad-form",
+    "pluralName": "abroad-forms",
+    "displayName": "AbroadForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "admission_status": {
+      "type": "string"
+    },
+    "loanType": {
+      "type": "string"
+    },
+    "loanAmount": {
+      "type": "biginteger"
+    }
+  }
+}
