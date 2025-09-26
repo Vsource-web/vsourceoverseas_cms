@@ -408,6 +408,40 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAbroadFormAbroadForm extends Struct.CollectionTypeSchema {
+  collectionName: 'abroad_forms';
+  info: {
+    displayName: 'AbroadForm';
+    pluralName: 'abroad-forms';
+    singularName: 'abroad-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    admission_status: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    loanAmount: Schema.Attribute.BigInteger;
+    loanType: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::abroad-form.abroad-form'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    number: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAbroadAbroad extends Struct.CollectionTypeSchema {
   collectionName: 'abroads';
   info: {
@@ -1319,6 +1353,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::abroad-form.abroad-form': ApiAbroadFormAbroadForm;
       'api::abroad.abroad': ApiAbroadAbroad;
       'api::enquire.enquire': ApiEnquireEnquire;
       'api::fintech-about-us.fintech-about-us': ApiFintechAboutUsFintechAboutUs;
