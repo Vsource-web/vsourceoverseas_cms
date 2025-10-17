@@ -17,7 +17,7 @@ ENV NODE_ENV=production
 
 COPY --from=builder /srv/app/package*.json ./
 COPY --from=builder /srv/app/node_modules ./node_modules
-COPY --from=builder /srv/app/build ./build
+COPY --from=builder /srv/app/dist ./dist
 COPY --from=builder /srv/app/public ./public
 COPY --from=builder /srv/app ./
 
