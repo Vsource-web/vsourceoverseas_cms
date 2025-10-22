@@ -2,7 +2,16 @@ export default [
   "strapi::logger",
   "strapi::errors",
   "strapi::security",
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      origin: ["https://vsourceoverseas.com"], 
+      headers: "*",
+      methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      keepHeaderOnError: true,
+    },
+  },
   "strapi::poweredBy",
   "strapi::query",
   {
