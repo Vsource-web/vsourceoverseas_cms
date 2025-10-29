@@ -1,43 +1,43 @@
-// export default ({ env }) => ({
-//   connection: {
-//     client: "postgres",
-//     connection: {
-//       connectionString: env("DATABASE_URL"),
-//       ssl: env.bool("DATABASE_SSL", true) && {
-//         rejectUnauthorized: false,
-//       },
-//     },
-//     debug: false,
-//   },
-// });
+/**
+ * Strapi Database Configuration
+ * Works for both Docker/Postgres and cloud deployments
+ * (supports DATABASE_URL and individual env vars)
+ */
 
 export default ({ env }) => {
-  const dbUrl = env("DATABASE_URL"); // Will only exist in Cloud (or if you set it locally)
+  const databaseUrl = env('DATABASE_URL');
 
-  if (dbUrl) {
-    // Use Postgres (Cloud / external DB)
+  // --- Cloud / single connection string (e.g. Render, Railway, etc.) ---
+  if (databaseUrl) {
     return {
       connection: {
-        client: "postgres",
+        client: 'postgres',
         connection: {
-          connectionString: dbUrl,
-          ssl: env.bool("DATABASE_SSL", true) && {
-            rejectUnauthorized: false,
-          },
+          connectionString: databaseUrl,
+          ssl: env.bool('DATABASE_SSL', true)
+            ? { rejectUnauthorized: false }
+            : false,
         },
-        debug: false,
+        debug: env.bool('DATABASE_DEBUG', false),
       },
     };
   }
 
-  // Default: use SQLite locally
+  // --- Default: Docker / Local Postgres ---
   return {
     connection: {
-      client: "sqlite",
+      client: 'postgres',
       connection: {
-        filename: env("DATABASE_FILENAME", ".tmp/data.db"),
+        host: env('DATABASE_HOST', 'db'), // Docker service name
+        port: env.int('DATABASE_PORT', 5432),
+        database: env('DATABASE_NAME', 'strapi_prod'),
+        user: env('DATABASE_USERNAME', 'strapi'),
+        password: env('DATABASE_PASSWORD', 'vsource'),
+        ssl: env.bool('DATABASE_SSL', false)
+          ? { rejectUnauthorized: false }
+          : false,
       },
-      useNullAsDefault: true,
+      debug: env.bool('DATABASE_DEBUG', false),
     },
   };
 };
