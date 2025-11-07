@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_admissions_sliders",
+  "info": {
+    "displayName": "sliders"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

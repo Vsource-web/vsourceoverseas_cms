@@ -487,6 +487,37 @@ export interface ApiAbroadAbroad extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAdmissionsLangingPageAdmissionsLangingPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'admissions_langing_pages';
+  info: {
+    displayName: 'admissions_langing_page';
+    pluralName: 'admissions-langing-pages';
+    singularName: 'admissions-langing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.Component<'admissions.about', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::admissions-langing-page.admissions-langing-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Component<'blocks.services', false>;
+    sliders: Schema.Attribute.Component<'admissions.sliders', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEnquireEnquire extends Struct.CollectionTypeSchema {
   collectionName: 'enquires';
   info: {
@@ -1355,6 +1386,7 @@ declare module '@strapi/strapi' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::abroad-form.abroad-form': ApiAbroadFormAbroadForm;
       'api::abroad.abroad': ApiAbroadAbroad;
+      'api::admissions-langing-page.admissions-langing-page': ApiAdmissionsLangingPageAdmissionsLangingPage;
       'api::enquire.enquire': ApiEnquireEnquire;
       'api::fintech-about-us.fintech-about-us': ApiFintechAboutUsFintechAboutUs;
       'api::fintech-enquire.fintech-enquire': ApiFintechEnquireFintechEnquire;

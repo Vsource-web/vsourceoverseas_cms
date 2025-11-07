@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "admissions_langing_pages",
+  "info": {
+    "singularName": "admissions-langing-page",
+    "pluralName": "admissions-langing-pages",
+    "displayName": "admissions_langing_page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sliders": {
+      "type": "component",
+      "component": "admissions.sliders",
+      "repeatable": true
+    },
+    "about": {
+      "type": "component",
+      "component": "admissions.about",
+      "repeatable": false
+    },
+    "services": {
+      "type": "component",
+      "component": "blocks.services",
+      "repeatable": false
+    }
+  }
+}

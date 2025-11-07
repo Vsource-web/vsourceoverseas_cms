@@ -73,6 +73,31 @@ export interface AboutUsSubheadings extends Struct.ComponentSchema {
   };
 }
 
+export interface AdmissionsAbout extends Struct.ComponentSchema {
+  collectionName: 'components_admissions_abouts';
+  info: {
+    displayName: 'about';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'about-us.about-card', true>;
+    chairman: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    description: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AdmissionsSliders extends Struct.ComponentSchema {
+  collectionName: 'components_admissions_sliders';
+  info: {
+    displayName: 'sliders';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksAboutCount extends Struct.ComponentSchema {
   collectionName: 'components_blocks_about_counts';
   info: {
@@ -1334,6 +1359,8 @@ declare module '@strapi/strapi' {
       'about-us.management-team': AboutUsManagementTeam;
       'about-us.member': AboutUsMember;
       'about-us.subheadings': AboutUsSubheadings;
+      'admissions.about': AdmissionsAbout;
+      'admissions.sliders': AdmissionsSliders;
       'blocks.about-count': BlocksAboutCount;
       'blocks.about-list': BlocksAboutList;
       'blocks.about-us': BlocksAboutUs;

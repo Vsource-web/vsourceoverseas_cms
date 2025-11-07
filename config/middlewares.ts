@@ -5,7 +5,6 @@ export default [
   {
     name: "strapi::cors",
     config: {
-      enabled: true,
       origin: ["https://vsourceoverseas.com", "http://localhost:8080"],
       headers: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
