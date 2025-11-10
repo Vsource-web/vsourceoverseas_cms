@@ -1,7 +1,21 @@
 export default [
   "strapi::logger",
   "strapi::errors",
-  "strapi::security",
+  {
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "connect-src": ["'self'", "https:", "blob:"],
+          "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+          "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+          "script-src": ["'self'", "https:"],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   {
     name: "strapi::cors",
     config: {
