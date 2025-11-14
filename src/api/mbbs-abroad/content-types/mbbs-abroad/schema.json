@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mbbs_abroads",
+  "info": {
+    "singularName": "mbbs-abroad",
+    "pluralName": "mbbs-abroads",
+    "displayName": "mbbs abroad"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string",
+      "required": false
+    },
+    "recognitions": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "about_img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "highlights": {
+      "type": "component",
+      "component": "universities.highlight",
+      "repeatable": true
+    },
+    "admission_requirements": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "admission_process": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "hostelfacility": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "hostelimage": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "city_infra": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "city_infra_images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "faqs": {
+      "type": "component",
+      "component": "explore-uni.faq",
+      "repeatable": false
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

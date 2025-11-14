@@ -164,6 +164,16 @@ export interface BlocksComprehensive extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksHostelFacility extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_hostel_facilities';
+  info: {
+    displayName: 'hostel_facility';
+  };
+  attributes: {
+    hostel: Schema.Attribute.Component<'universities.text', true>;
+  };
+}
+
 export interface BlocksServices extends Struct.ComponentSchema {
   collectionName: 'components_blocks_services';
   info: {
@@ -1366,6 +1376,7 @@ declare module '@strapi/strapi' {
       'blocks.about-us': BlocksAboutUs;
       'blocks.company': BlocksCompany;
       'blocks.comprehensive': BlocksComprehensive;
+      'blocks.hostel-facility': BlocksHostelFacility;
       'blocks.services': BlocksServices;
       'blocks.study-destination': BlocksStudyDestination;
       'blocks.success-stories': BlocksSuccessStories;

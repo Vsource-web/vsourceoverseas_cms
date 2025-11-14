@@ -743,6 +743,53 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMbbsAbroadMbbsAbroad extends Struct.CollectionTypeSchema {
+  collectionName: 'mbbs_abroads';
+  info: {
+    displayName: 'mbbs abroad';
+    pluralName: 'mbbs-abroads';
+    singularName: 'mbbs-abroad';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.RichText;
+    about_img: Schema.Attribute.Media<'images' | 'files'>;
+    admission_process: Schema.Attribute.Component<'universities.text', true>;
+    admission_requirements: Schema.Attribute.Component<
+      'universities.text',
+      true
+    >;
+    banner: Schema.Attribute.Media<'images' | 'files'>;
+    city: Schema.Attribute.String;
+    city_infra: Schema.Attribute.Component<'universities.text', true>;
+    city_infra_images: Schema.Attribute.Media<'images' | 'files', true>;
+    country: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faqs: Schema.Attribute.Component<'explore-uni.faq', false>;
+    gallery: Schema.Attribute.Media<'images' | 'files', true>;
+    highlights: Schema.Attribute.Component<'universities.highlight', true>;
+    hostelfacility: Schema.Attribute.Component<'universities.text', true>;
+    hostelimage: Schema.Attribute.Media<'images' | 'files', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mbbs-abroad.mbbs-abroad'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    recognitions: Schema.Attribute.Component<'universities.text', true>;
+    slug: Schema.Attribute.UID<'name'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOurPatnerOurPatner extends Struct.CollectionTypeSchema {
   collectionName: 'our_patners';
   info: {
@@ -1393,6 +1440,7 @@ declare module '@strapi/strapi' {
       'api::fintech-landing-page.fintech-landing-page': ApiFintechLandingPageFintechLandingPage;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::mbbs-abroad.mbbs-abroad': ApiMbbsAbroadMbbsAbroad;
       'api::our-patner.our-patner': ApiOurPatnerOurPatner;
       'api::our-service.our-service': ApiOurServiceOurService;
       'api::uni-directory.uni-directory': ApiUniDirectoryUniDirectory;

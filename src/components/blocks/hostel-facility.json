@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_hostel_facilities",
+  "info": {
+    "displayName": "hostel_facility"
+  },
+  "options": {},
+  "attributes": {
+    "hostel": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

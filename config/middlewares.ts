@@ -1,25 +1,18 @@
 export default [
   "strapi::logger",
   "strapi::errors",
-  {
-    name: "strapi::security",
-    config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-        directives: {
-          "connect-src": ["'self'", "https:", "blob:"],
-          "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
-          "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
-          "script-src": ["'self'", "https:"],
-          upgradeInsecureRequests: null,
-        },
-      },
-    },
-  },
+  "strapi::security",
   {
     name: "strapi::cors",
     config: {
-      origin: ["https://vsourceoverseas.com", "http://localhost:8080"],
+      origin: [
+        "https://vsourceoverseas.com",
+        "http://localhost:8080",
+        "https://demo.vsourceadmissions.com",
+        "https://demofintech.vsource.online",
+        "https://vsourcefintech.com",
+        "https://vsourceadmissions.com",
+      ],
       headers: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
       keepHeaderOnError: true,
