@@ -769,7 +769,10 @@ export interface ApiMbbsAbroadMbbsAbroad extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    documents_required: Schema.Attribute.Component<'universities.text', true>;
+    eligibility_criteria: Schema.Attribute.Component<'universities.text', true>;
     faqs: Schema.Attribute.Component<'explore-uni.faq', false>;
+    fees: Schema.Attribute.Component<'blocks.fees', false>;
     gallery: Schema.Attribute.Media<'images' | 'files', true>;
     highlights: Schema.Attribute.Component<'universities.highlight', true>;
     hostelfacility: Schema.Attribute.Component<'universities.text', true>;

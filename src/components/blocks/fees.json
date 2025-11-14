@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_blocks_fees",
+  "info": {
+    "displayName": "fees"
+  },
+  "options": {},
+  "attributes": {
+    "GEL": {
+      "type": "decimal"
+    },
+    "USD": {
+      "type": "decimal"
+    },
+    "RUB": {
+      "type": "decimal"
+    },
+    "includes": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "excludes": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "fees_details": {
+      "type": "component",
+      "component": "blocks.years-format",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_years_formats",
+  "info": {
+    "displayName": "years format"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "tuition": {
+      "type": "string"
+    },
+    "hostel": {
+      "type": "string"
+    },
+    "insurance": {
+      "type": "string"
+    },
+    "other": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -164,6 +164,21 @@ export interface BlocksComprehensive extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksFees extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_fees';
+  info: {
+    displayName: 'fees';
+  };
+  attributes: {
+    excludes: Schema.Attribute.Component<'universities.text', true>;
+    fees_details: Schema.Attribute.Component<'blocks.years-format', true>;
+    GEL: Schema.Attribute.Decimal;
+    includes: Schema.Attribute.Component<'universities.text', true>;
+    RUB: Schema.Attribute.Decimal;
+    USD: Schema.Attribute.Decimal;
+  };
+}
+
 export interface BlocksHostelFacility extends Struct.ComponentSchema {
   collectionName: 'components_blocks_hostel_facilities';
   info: {
@@ -207,6 +222,21 @@ export interface BlocksSuccessStories extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     testimonials: Schema.Attribute.Component<'elements.testimonial', true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksYearsFormat extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_years_formats';
+  info: {
+    displayName: 'years format';
+  };
+  attributes: {
+    hostel: Schema.Attribute.String;
+    insurance: Schema.Attribute.String;
+    notes: Schema.Attribute.String;
+    other: Schema.Attribute.String;
+    tuition: Schema.Attribute.String;
+    year: Schema.Attribute.String;
   };
 }
 
@@ -1376,10 +1406,12 @@ declare module '@strapi/strapi' {
       'blocks.about-us': BlocksAboutUs;
       'blocks.company': BlocksCompany;
       'blocks.comprehensive': BlocksComprehensive;
+      'blocks.fees': BlocksFees;
       'blocks.hostel-facility': BlocksHostelFacility;
       'blocks.services': BlocksServices;
       'blocks.study-destination': BlocksStudyDestination;
       'blocks.success-stories': BlocksSuccessStories;
+      'blocks.years-format': BlocksYearsFormat;
       'elements.comprehensive-cards': ElementsComprehensiveCards;
       'elements.link': ElementsLink;
       'elements.service-card': ElementsServiceCard;

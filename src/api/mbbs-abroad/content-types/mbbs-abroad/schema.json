@@ -86,6 +86,11 @@
         "files"
       ]
     },
+    "fees": {
+      "type": "component",
+      "component": "blocks.fees",
+      "repeatable": false
+    },
     "faqs": {
       "type": "component",
       "component": "explore-uni.faq",
@@ -98,6 +103,16 @@
         "images",
         "files"
       ]
+    },
+    "eligibility_criteria": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
+    },
+    "documents_required": {
+      "type": "component",
+      "component": "universities.text",
+      "repeatable": true
     },
     "slug": {
       "type": "uid",
