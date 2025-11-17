@@ -763,15 +763,12 @@ export interface ApiMbbsAbroadMbbsAbroad extends Struct.CollectionTypeSchema {
     >;
     banner: Schema.Attribute.Media<'images' | 'files'>;
     city: Schema.Attribute.String;
-    city_infra: Schema.Attribute.Component<'universities.text', true>;
-    city_infra_images: Schema.Attribute.Media<'images' | 'files', true>;
     country: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     documents_required: Schema.Attribute.Component<'universities.text', true>;
     eligibility_criteria: Schema.Attribute.Component<'universities.text', true>;
-    faqs: Schema.Attribute.Component<'explore-uni.faq', false>;
     fees: Schema.Attribute.Component<'blocks.fees', false>;
     gallery: Schema.Attribute.Media<'images' | 'files', true>;
     highlights: Schema.Attribute.Component<'universities.highlight', true>;
@@ -787,6 +784,18 @@ export interface ApiMbbsAbroadMbbsAbroad extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     recognitions: Schema.Attribute.Component<'universities.text', true>;
     slug: Schema.Attribute.UID<'name'>;
+    university_infrastructure: Schema.Attribute.Component<
+      'universities.text',
+      true
+    >;
+    university_infrastructure_images: Schema.Attribute.Media<
+      'images' | 'files',
+      true
+    >;
+    university_requirements: Schema.Attribute.Component<
+      'explore-uni.faq',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

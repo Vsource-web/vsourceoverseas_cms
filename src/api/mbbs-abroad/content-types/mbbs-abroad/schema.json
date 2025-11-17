@@ -73,12 +73,12 @@
         "files"
       ]
     },
-    "city_infra": {
+    "university_infrastructure": {
       "type": "component",
       "component": "universities.text",
       "repeatable": true
     },
-    "city_infra_images": {
+    "university_infrastructure_images": {
       "type": "media",
       "multiple": true,
       "allowedTypes": [
@@ -91,7 +91,7 @@
       "component": "blocks.fees",
       "repeatable": false
     },
-    "faqs": {
+    "university_requirements": {
       "type": "component",
       "component": "explore-uni.faq",
       "repeatable": false
