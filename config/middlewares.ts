@@ -26,6 +26,8 @@ export default [
         "https://demofintech.vsource.online",
         "https://vsourcefintech.com",
         "https://vsourceadmissions.com",
+        "https://www.vsourceoverseas.com",
+        "https://www.vsourcefintech.com",
       ],
       headers: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
